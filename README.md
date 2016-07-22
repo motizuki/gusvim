@@ -1,3 +1,6 @@
+# Requirements  
+Vim 7.4 or above + compiled with Lua (neocomplete plugin)  
+
 # Cheatsheet
 
 `,` is used as mapleader `backslash` is used as localleader  
