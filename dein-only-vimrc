@@ -1,0 +1,11 @@
+if &compatible
+  set nocompatible
+endif
+
+set runtimepath^=~/.vim/bundle/repos/github.com/Shougo/dein.vim
+call dein#begin('~/.vim/bundle')
+call dein#add('~/.vim/bundle/repos/github.com/Shougo/dein.vim')
+call dein#end()
+
+filetype plugin indent on
+
