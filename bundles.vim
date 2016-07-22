@@ -5,7 +5,7 @@ endif
 set runtimepath^=~/.vim/bundle/repos/github.com/Shougo/dein.vim
 call dein#begin('~/.vim/bundle')
 
-call dein#add('~/.vim/bundle/repos/github.com/Shougo/dein.vim')
+call dein#add('Shougo/dein.vim')
 
 " file tree
 call dein#add('scrooloose/nerdtree')
