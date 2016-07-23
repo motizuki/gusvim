@@ -45,8 +45,8 @@ nnoremap + <C-a>
 nnoremap - <C-x>
 
 " Jump to ctags
-nnoremap gf :let @/="\\<<C-R><C-W>\\>"<CR>:ta <C-R><C-W>
-nnoremap gn :tn<CR>
+nnoremap tn :tn<CR>
+nnoremap tp :tp<CR>
 
 " remove trailing spaces
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
