@@ -52,6 +52,7 @@ Vim 7.4 or above + compiled with Lua (neocomplete plugin)
 `Ctrl-]` find word under cursor in Ctags  
 `tn` next Ctags match  
 `tp` previus Ctags match  
+`Ctrl-t` back to original file  
 
 ### Ruby
 `,hf` - Replace => to : with confirmation  
