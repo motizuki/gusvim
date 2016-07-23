@@ -17,6 +17,10 @@ if has('multi_byte')
   set encoding=utf-8
 end
 
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+
 " presentation settings
 set relativenumber      " precede each line with its line number
 set number

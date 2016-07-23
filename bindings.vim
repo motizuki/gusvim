@@ -44,6 +44,10 @@ nnoremap k gk
 nnoremap + <C-a>
 nnoremap - <C-x>
 
+" Jump to ctags
+nnoremap gf :let @/="\\<<C-R><C-W>\\>"<CR>:ta <C-R><C-W>
+nnoremap gn :tn<CR>
+
 " remove trailing spaces
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
 
@@ -61,10 +65,10 @@ vnoremap ∆ :m '>+1<CR>gv=gv
 vnoremap ˚ :m '<-2<CR>gv=gv
 
 " ,f for global git serach for word under the cursor (with highlight)
-nmap <leader>f :let @/="\\<<C-R><C-W>\\>"<CR>:set hls<CR>:silent Ggrep -w "<C-R><C-W>"<CR>:ccl<CR>:cw<CR><CR>
+nmap <leader>f :let @/="\\<<C-R><C-W>\\>"<CR>:set hls<CR>:silent Ag -w "<C-R><C-W>"<CR>:ccl<CR>:cw<CR><CR>
 
 " same in visual mode
-:vmap <leader>f y:let @/=escape(@", '\\[]$^*.')<CR>:set hls<CR>:silent Ggrep -F "<C-R>=escape(@", '\\"#')<CR>"<CR>:ccl<CR>:cw<CR><CR>
+:vmap <leader>f y:let @/=escape(@", '\\[]$^*.')<CR>:set hls<CR>:silent Ag -F "<C-R>=escape(@", '\\"#')<CR>"<CR>:ccl<CR>:cw<CR><CR>
 
 " Format JSON
 vnoremap <leader>jf :!python -m json.tool<cr>

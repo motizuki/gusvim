@@ -31,8 +31,6 @@ call dein#add('tsaleh/vim-align')
 call dein#add('rking/ag.vim')
 " text object based on indent level (ai, ii)
 call dein#add('austintaylor/vim-indentobject')
-" better looking statusline
-call dein#add('bling/vim-airline')
 " plugin for visually displaying indent levels
 call dein#add('Indent-Guides')
 " end certain structures automatically, e.g. begin/end etc.
@@ -48,6 +46,7 @@ call dein#add('mattn/emmet-vim')
 " indent
 call dein#add('nathanaelkane/vim-indent-guides')
 " airline
+call dein#add('vim-airline/vim-airline')
 call dein#add('vim-airline/vim-airline-themes')
 
 " Completion popup and snippets
@@ -79,14 +78,8 @@ call dein#add('terryma/vim-multiple-cursors')
 " Ruby/Rails
 " rails support
 call dein#add('tpope/vim-rails')
-" bundler integration (e.g. :Bopen)
-call dein#add('tpope/vim-bundler')
-" rake integration
-call dein#add('tpope/vim-rake')
 " ruby refactoring
 call dein#add('ecomba/vim-ruby-refactoring')
-" apidock.com docs integration
-call dein#add('apidock.vim')
 " toggle ruby blocks style
 call dein#add('vim-scripts/blockle.vim')
 " lightweight Rspec runner for Vim
@@ -118,7 +111,8 @@ call dein#add('vitaly/vim-gitignore')
 call dein#add('scrooloose/vim-space')
 " Elixir
 call dein#add('elixir-lang/vim-elixir')
-"
+
+" Unite
 call dein#add('Shougo/unite.vim')
 call dein#add('Shougo/unite-outline')
 call dein#add('ujihisa/unite-colorscheme')
