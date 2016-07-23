@@ -47,8 +47,11 @@ Vim 7.4 or above + compiled with Lua (neocomplete plugin)
 `<Ctrl-r>x` while in insert mote will paste content of register x (replace x with any other)  
 `"xp` paste from register x  
 `:reg` Display the contents of all numbered and named registers.  
-`gf` find word under cursor in Ctags  
-`gn` next Ctags match  
+
+### Ctags
+`Ctrl-]` find word under cursor in Ctags  
+`tn` next Ctags match  
+`tp` previus Ctags match  
 
 ### Ruby
 `,hf` - Replace => to : with confirmation  
