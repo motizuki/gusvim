@@ -49,6 +49,8 @@ Vim 7.4 or above + compiled with Lua (neocomplete plugin)
 `:reg` Display the contents of all numbered and named registers.  
 
 ### Ctags
+Generate ctags - `ctags -R --languages=ruby --exclude=.git --exclude=log . $(bundle list --paths)`  
+Auto generate ctags on bundle - ` gem install gem-ctags`  
 `Ctrl-]` find word under cursor in Ctags  
 `tn` next Ctags match  
 `tp` previus Ctags match  
