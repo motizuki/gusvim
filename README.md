@@ -2,7 +2,7 @@
 Vim 7.4 or above + compiled with Lua (neocomplete plugin)  
 
 # Install
-`git clone https://github.com/motizuki/gusvim.git ~/.gusvim && cd ~/.gusvim && sh install.sh`  
+`git clone https://github.com/motizuki/gusvim.git ~/gusvim && cd ~/gusvim && sh install.sh`  
 
 # Cheatsheet
 
