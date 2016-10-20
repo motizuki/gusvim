@@ -157,9 +157,9 @@ let g:SuperTabCrMapping = 0
 let g:acp_enableAtStartup = 0
 let g:neocomplete#enable_at_startup = 1
 
-" Tsuquyomi typescript
-" let g:tsuquyomi_disable_quickfix = 1
-" let g:syntastic_typescript_checkers = ['tsuquyomi']
+" typescript
+let g:typescript_compiler_binary = 'tsc'
+let g:typescript_compiler_options = ''
 
 " Called once right before you start selecting multiple cursors
 function! Multiple_cursors_before()
