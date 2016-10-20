@@ -156,6 +156,11 @@ let g:SuperTabCrMapping = 0
 " Neocomplete - popup
 let g:acp_enableAtStartup = 0
 let g:neocomplete#enable_at_startup = 1
+
+" Tsuquyomi typescript
+" let g:tsuquyomi_disable_quickfix = 1
+" let g:syntastic_typescript_checkers = ['tsuquyomi']
+
 " Called once right before you start selecting multiple cursors
 function! Multiple_cursors_before()
   if exists(':NeoCompleteLock')==2
