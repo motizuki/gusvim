@@ -119,6 +119,9 @@ call dein#add('ujihisa/unite-colorscheme')
 
 " Typescript
 call dein#add('leafgarland/typescript-vim')
+call dein#add('Quramy/tsuquyomi')
+call dein#add('mhartington/vim-typings')
+call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
 
 call dein#end()
 
