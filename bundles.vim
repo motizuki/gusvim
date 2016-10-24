@@ -61,13 +61,7 @@ call dein#add('othree/javascript-libraries-syntax.vim')
 call dein#add('othree/html5.vim')
 call dein#add('Shutnik/jshint2.vim')
 call dein#add('heavenshell/vim-jsdoc')
-call dein#add('kchmck/vim-coffee-script')
-
-"html Template
-call dein#add('digitaltoad/vim-pug') " Jade
-
-" CSS
-call dein#add('wavded/vim-stylus')
+call dein#add('pangloss/vim-javascript')
 
 " Tmux
 call dein#add('christoomey/vim-tmux-runner')
@@ -99,9 +93,6 @@ call dein#add('tpope/vim-cucumber')
 call dein#add('tpope/vim-haml')
 call dein#add('tpope/vim-markdown')
 call dein#add('ekalinin/Dockerfile.vim')
-call dein#add('groenewege/vim-less')
-call dein#add('mustache/vim-mustache-handlebars')
-call dein#add('pangloss/vim-javascript')
 
 " replacement for the repeat mapping (.) to support plugins
 call dein#add('tpope/vim-repeat')
@@ -119,9 +110,9 @@ call dein#add('ujihisa/unite-colorscheme')
 
 " Typescript
 call dein#add('leafgarland/typescript-vim')
-call dein#add('Quramy/tsuquyomi')
-call dein#add('mhartington/vim-typings')
-call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
+" call dein#add('Quramy/tsuquyomi')
+" call dein#add('mhartington/vim-typings')
+" call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
 
 call dein#end()
 

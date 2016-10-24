@@ -47,10 +47,6 @@ nmap <leader>u :GundoToggle<CR>
 " ,ag for Ag silver searcher
 nmap <leader>ag :silent Ag<space>
 
-" vim-rspec
-map <Leader>r :call RunNearestSpec()<CR>
-let g:rspec_command = "VtrSendCommandToRunner rspec {spec}"
-
 " nerdcommenter
 " ,/ to invert comment on the current line/selection
 let NERDSpaceDelims=1
@@ -99,7 +95,6 @@ let g:ctrlp_open_multiple_files = 'vjr'
 
 let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'mixed', 'line']
 
-
 " vim-indentobject
 " add Markdown to the list of indentation based languages
 let g:indentobject_meaningful_indentation = ["haml", "sass", "python", "yaml", "markdown"]
@@ -137,10 +132,6 @@ let g:airline_powerline_fonts=1
 let g:airline_theme='luna' " dark simple badwolf solarized solarized2
 set noshowmode
 
-" Tern
-"nnoremap <leader>gd :TernDef<cr>
-"let g:tern_show_argument_hints = 'on_move'
-
 " Filetypes
 autocmd BufRead,BufNewFile *.spec.js set filetype=javascript-jasmine syntax=javascript
 
@@ -156,10 +147,6 @@ let g:SuperTabCrMapping = 0
 " Neocomplete - popup
 let g:acp_enableAtStartup = 0
 let g:neocomplete#enable_at_startup = 1
-
-" typescript
-let g:typescript_compiler_binary = 'tsc'
-let g:typescript_compiler_options = ''
 
 " Called once right before you start selecting multiple cursors
 function! Multiple_cursors_before()
@@ -182,17 +169,6 @@ set diffopt+=vertical
 " Set nostartofline
 se nosol
 
-"Rubocop
-let g:syntastic_ruby_checkers          = ['rubocop', 'mri']
-let g:syntastic_ruby_rubocop_exec      = '`which rubocop`'
-
-"Adding control-x binding to jsdoc, jumping above the current function declaration
-nmap <silent> <C-x> ?function<cr>:noh<cr><Plug>(jsdoc)
-
-"JSDoc config
-let g:jsdoc_allow_input_prompt=1
-let g:jsdoc_input_description=1
-
 " Sane Ignore For ctrlp
 let g:ctrlp_custom_ignore = {
   \ 'dir': '\.git$\|\.hg$\|\.svn$\|\.yardoc\|public\/images\|public\/system\|data\|log\|tmp$',
@@ -202,5 +178,22 @@ let g:ctrlp_custom_ignore = {
 " Tmux navigator
 let g:tmux_navigator_no_mappings = 1
 
+" JS - 
 " Javascript syntax
 let g:used_javascript_libs = 'angularjs, jquery, jasmine, angularuirouter, angularui'
+
+"JSDoc config
+let g:jsdoc_allow_input_prompt=1
+let g:jsdoc_input_description=1
+
+"Adding control-x binding to jsdoc, jumping above the current function declaration
+nmap <silent> <C-x> ?function<cr>:noh<cr><Plug>(jsdoc)
+
+" Rails - ruby
+" vim-rspec
+map <Leader>r :call RunNearestSpec()<CR>
+let g:rspec_command = "VtrSendCommandToRunner rspec {spec}"
+
+"Rubocop
+let g:syntastic_ruby_checkers          = ['rubocop', 'mri']
+let g:syntastic_ruby_rubocop_exec      = '`which rubocop`'
