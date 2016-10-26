@@ -88,7 +88,9 @@ let g:ctrlp_switch_buffer = 1
 " using this option overrides standard CtrlP ignore list based on vim wildignore
 " so use 'grep -v ...' to exclude common image and font files from the search
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files --exclude-standard -cod | grep -viE "\.(png|gif|jpg|gz|woff|eot|tiff|ttf|otf)$"']
-
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(node_modules)$'
+  \ }
 " open multiple files with <c-z> to mark and <c-o> to open. v - opening in
 " vertical splits; j - jump to first open buffer; r - open first in current buffer
 let g:ctrlp_open_multiple_files = 'vjr'
