@@ -111,8 +111,11 @@ call dein#add('ujihisa/unite-colorscheme')
 " Typescript
 call dein#add('leafgarland/typescript-vim')
 call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
-" call dein#add('Quramy/tsuquyomi')
+call dein#add('clausreinke/typescript-tools.vim', { 'build': 'npm install' })
 " call dein#add('mhartington/vim-typings')
+
+call dein#add('szw/vim-tags')
+call dein#add('tpope/vim-dispatch')
 
 call dein#end()
 
