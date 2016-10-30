@@ -183,7 +183,7 @@ let g:tmux_navigator_no_mappings = 1
 " vim-tags
 let g:vim_tags_use_vim_dispatch = 1
 
-" JS - 
+" JS -
 " Javascript syntax
 let g:used_javascript_libs = 'angularjs, jquery, jasmine, angularuirouter, angularui'
 
@@ -202,3 +202,10 @@ let g:rspec_command = "VtrSendCommandToRunner rspec {spec}"
 "Rubocop
 let g:syntastic_ruby_checkers          = ['rubocop', 'mri']
 let g:syntastic_ruby_rubocop_exec      = '`which rubocop`'
+
+" Typescript
+let g:tsuquyomi_completion_detail = 1
+let g:tsuquyomi_disable_quickfix = 1
+let g:tsuquyomi_use_dev_node_module = 1
+let g:syntastic_typescript_checkers = ['tsuquyomi']
+autocmd FileType typescript setlocal completeopt+=menu,preview

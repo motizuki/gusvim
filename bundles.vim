@@ -7,6 +7,7 @@ call dein#begin('~/.vim/bundle')
 
 call dein#add('Shougo/dein.vim')
 
+call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
 " file tree
 call dein#add('scrooloose/nerdtree')
 " file tree and tabs interaction
@@ -108,14 +109,12 @@ call dein#add('Shougo/unite.vim')
 call dein#add('Shougo/unite-outline')
 call dein#add('ujihisa/unite-colorscheme')
 
-" Typescript
-call dein#add('leafgarland/typescript-vim')
-call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
-call dein#add('clausreinke/typescript-tools.vim', { 'build': 'npm install' })
-" call dein#add('mhartington/vim-typings')
-
 call dein#add('szw/vim-tags')
 call dein#add('tpope/vim-dispatch')
+
+" TS -- Depends on vimproc
+call dein#add('Quramy/tsuquyomi')
+call dein#add('leafgarland/typescript-vim')
 
 call dein#end()
 
