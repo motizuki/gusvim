@@ -38,8 +38,6 @@ call dein#add('Indent-Guides')
 call dein#add('tpope/vim-endwise')
 " visual undo tree
 call dein#add('sjl/gundo.vim')
-" switch segments of text with predefined replacements. e.g. '' -> ""
-call dein#add('AndrewRadev/switch.vim')
 " git diff in the gutter (sign column) and stages/reverts hunks
 call dein#add('airblade/vim-gitgutter')
 " hi-speed html coding
@@ -73,10 +71,6 @@ call dein#add('terryma/vim-multiple-cursors')
 " Ruby/Rails
 " rails support
 call dein#add('tpope/vim-rails')
-" ruby refactoring
-call dein#add('ecomba/vim-ruby-refactoring')
-" toggle ruby blocks style
-call dein#add('vim-scripts/blockle.vim')
 " lightweight Rspec runner for Vim
 call dein#add('thoughtbot/vim-rspec')
 " i18n extraction plugin

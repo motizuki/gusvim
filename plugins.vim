@@ -31,9 +31,6 @@ nnoremap <leader>rn :VtrOpenRunner<cr>
 nnoremap <leader>rk :VtrKillRunner<cr>
 nnoremap <leader>ra :VtrAttachToPane<cr>
 
-" Switch
-nnoremap <leader>swi :Switch<cr>
-
 " nerdtree
 " Ctrl-P to Display the file browser tree
 nmap <C-P> :NERDTreeToggle<CR>
@@ -119,9 +116,6 @@ autocmd FileType haml let b:switch_definitions =
       \   g:switch_builtins.true_false,
       \   g:switch_builtins.true_false,
       \ ]
-
-" Blockle - swap between do/end {}
-let g:blockle_mapping = '<Leader>B'
 
 let g:unite_source_history_yank_enable = 1
 let g:unite_enable_start_insert = 1
