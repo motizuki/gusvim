@@ -111,10 +111,7 @@ Auto generate ctags on bundle - ` gem install gem-ctags`
 `,u` - Open Gundo window
 
 ### Vim i18n
-`,z` - Extract string to locale file  
-
-### Switch
-`,swi` - Switch variable on cursor  
+`,z` - Extract string to locale file   
 
 ### Vim rails
 `:AV` - open "alternate" file in a new vertical split  
@@ -124,20 +121,6 @@ Auto generate ctags on bundle - ` gem install gem-ctags`
 `:Rextract` - extract partial (select text for extraction first)  
 `:Rinvert` - takes a self.up migration and writes a self.down.  
 `gf` - remapped to take context into account. recognizes models associations, partials etc.  
-
-### Vim ruby refactoring
-`,rap` :RAddParameter - Add Parameter(s) to a method  
-`,rcpc` :RConvertPostConditional - Convert Post Conditional  
-`,rel` :RExtractLet - Extract to Let (Rspec)  
-`,rec` :RExtractConstant - Extract Constant (visual selection)  
-`,relv` :RExtractLocalVariable - Extract Local Variable (visual selection)  
-`,rit` :RInlineTemp - Inline Temp. replace temp parameter by direct function call  
-`,rrlv` :RRenameLocalVariable - Rename Local Variable (visual selection/variable under the cursor  
-`,rriv` :RRenameInstanceVariable - Rename Instance Variable (visual selection)  
-`,rem` :RExtractMethod - Extract Method (visual selection)  
-
-### Blockle
-`,B` - Toggle ruby blocks style, e.g `{}` to `do .. end`  
 
 ### Vim Rspec
 `,r` - Run nearest Rspec in Tmux Attached pane (Using VTR) 
