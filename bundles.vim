@@ -98,10 +98,8 @@ call dein#add('scrooloose/vim-space')
 " Elixir
 call dein#add('elixir-lang/vim-elixir')
 
-" Unite
-call dein#add('Shougo/unite.vim')
-call dein#add('Shougo/unite-outline')
-call dein#add('ujihisa/unite-colorscheme')
+" Denite
+call dein#add('Shougo/denite.nvim')
 
 call dein#add('szw/vim-tags')
 call dein#add('tpope/vim-dispatch')
