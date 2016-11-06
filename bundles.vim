@@ -107,7 +107,7 @@ call dein#add('szw/vim-tags')
 call dein#add('tpope/vim-dispatch')
 
 " TS -- Depends on vimproc
-call dein#add('Quramy/tsuquyomi')
+call dein#add('Quramy/tsuquyomi', {'depends': 'vimproc.vim'})
 call dein#add('leafgarland/typescript-vim')
 
 call dein#end()
