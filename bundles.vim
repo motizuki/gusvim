@@ -98,9 +98,6 @@ call dein#add('scrooloose/vim-space')
 " Elixir
 call dein#add('elixir-lang/vim-elixir')
 
-" Denite
-call dein#add('Shougo/denite.nvim')
-
 call dein#add('szw/vim-tags')
 call dein#add('tpope/vim-dispatch')
 
