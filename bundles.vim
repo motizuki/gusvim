@@ -10,8 +10,6 @@ call dein#add('Shougo/dein.vim')
 call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
 " file tree
 call dein#add('scrooloose/nerdtree')
-" file tree and tabs interaction
-call dein#add('jistr/vim-nerdtree-tabs')
 " commenting
 call dein#add('scrooloose/nerdcommenter')
 " fuzzy file open
