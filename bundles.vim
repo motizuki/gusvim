@@ -77,6 +77,8 @@ call dein#add('stefanoverna/vim-i18n')
 " color themes
 call dein#add('altercation/vim-colors-solarized')
 call dein#add('tpope/vim-vividchalk')
+call dein#add('chrisbra/Colorizer')
+
 
 " syntax support
 call dein#add('vim-ruby/vim-ruby')

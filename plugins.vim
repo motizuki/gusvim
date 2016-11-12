@@ -119,7 +119,7 @@ autocmd FileType haml let b:switch_definitions =
 
 " vim-airline
 let g:airline_powerline_fonts=1
-let g:airline_theme='luna' " dark simple badwolf solarized solarized2
+let g:airline_theme='badwolf' " dark simple badwolf solarized solarized2
 set noshowmode
 
 " Filetypes

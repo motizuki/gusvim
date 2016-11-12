@@ -2,8 +2,9 @@
 set nocompatible
 syntax on
 filetype plugin indent on
-
-colorscheme vividchalk
+colorscheme solarized
+" let g:solarized_termcolors=256
+" set background=light
 
 " prevent vim from adding that stupid empty line at the end of every file
 set noeol
