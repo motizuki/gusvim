@@ -2,9 +2,11 @@
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=2
 let g:syntastic_check_on_wq=0
-let g:syntastic_error_symbol='✗'
-let g:syntastic_warning_symbol='⚠'
-autocmd FileType javascript let b:syntastic_checkers = findfile('.jscsrc', '.;') != '' ? ['jscs'] : ['jshint']
+let g:syntastic_error_symbol='❌'
+let g:syntastic_style_error_symbol = '🚫'
+let g:syntastic_warning_symbol='🔰'
+let g:syntastic_style_warning_symbol = '🔆'
+
 let g:syntastic_html_tidy_ignore_errors=["<ion-", "discarding unexpected </ion-", " proprietary attribute \"ng-"]
 let g:syntastic_html_tidy_blocklevel_tags = ['ion-header-bar', 'ion-pane', 'ion-content', 'ion-view', 'ion-tabs', 'ion-tab', 'ion-nav-view']
 let g:syntastic_haml_checkers = ['haml_lint']
