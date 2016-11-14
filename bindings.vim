@@ -5,7 +5,7 @@ map Q gq
 nnoremap Y y$
 
 " Ctrl-N to disable search match highlight
-nmap <silent> <C-N> :silent noh<CR>
+nmap <silent> <C-C> :silent noh<CR>
 
 " Ctrol-E to switch between 2 last buffers
 nmap <C-E> :b#<CR>
