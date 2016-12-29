@@ -99,7 +99,6 @@ call dein#add('scrooloose/vim-space')
 call dein#add('elixir-lang/vim-elixir')
 
 call dein#add('szw/vim-tags')
-call dein#add('tpope/vim-dispatch')
 
 " TS -- Depends on vimproc
 call dein#add('Quramy/tsuquyomi', {'depends': 'Shougo/vimproc.vim'})
