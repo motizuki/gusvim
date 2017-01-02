@@ -1,13 +1,15 @@
 " syntastic
-let g:syntastic_enable_signs=1
-let g:syntastic_auto_loc_list=2
-let g:syntastic_check_on_wq=0
-let g:syntastic_error_symbol='✗'
-let g:syntastic_warning_symbol='⚠'
+let g:syntastic_enable_signs         = 1
+let g:syntastic_auto_loc_list        = 2
+let g:syntastic_check_on_wq          = 0
+let g:syntastic_error_symbol         = '✗'
+let g:syntastic_style_error_symbol   = '✗'
+let g:syntastic_warning_symbol       = '⚠'
+let g:syntastic_style_warning_symbol = '⚠'
 
-let g:syntastic_html_tidy_ignore_errors=["<ion-", "discarding unexpected </ion-", " proprietary attribute \"ng-", "attribute name \"*ng", "attribute name \"[", "attribute name \"("]
+let g:syntastic_html_tidy_ignore_errors   = ["<ion-", "discarding unexpected </ion-", " proprietary attribute \"ng-", "attribute name \"*ng", "attribute name \"[", "attribute name \"("]
 let g:syntastic_html_tidy_blocklevel_tags = ['ion-header-bar', 'ion-pane', 'ion-content', 'ion-view', 'ion-tabs', 'ion-tab', 'ion-nav-view']
-let g:syntastic_haml_checkers = ['haml_lint']
+let g:syntastic_haml_checkers             = ['haml_lint']
 
 " Gitgutter
 nmap ]h <Plug>GitGutterNextHunk
@@ -126,16 +128,16 @@ set noshowmode
 autocmd BufRead,BufNewFile *.spec.js set filetype=javascript-jasmine syntax=javascript
 
 " UltiSnips
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsExpandTrigger        = "<tab>"
+let g:UltiSnipsJumpForwardTrigger   = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger  = "<s-tab>"
 
 " Super Tab
 let g:SuperTabDefaultCompletionType = '<C-n>'
-let g:SuperTabCrMapping = 0
+let g:SuperTabCrMapping             = 0
 
 " Neocomplete - popup
-let g:acp_enableAtStartup = 0
+let g:acp_enableAtStartup           = 0
 let g:neocomplete#enable_at_startup = 1
 
 " Called once right before you start selecting multiple cursors
@@ -176,8 +178,8 @@ let g:vim_tags_use_vim_dispatch = 1
 let g:used_javascript_libs = 'angularjs, jquery, jasmine, angularuirouter, angularui'
 
 "JSDoc config
-let g:jsdoc_allow_input_prompt=1
-let g:jsdoc_input_description=1
+let g:jsdoc_allow_input_prompt = 1
+let g:jsdoc_input_description  = 1
 
 "Adding control-x binding to jsdoc, jumping above the current function declaration
 nmap <silent> <C-x> ?function<cr>:noh<cr><Plug>(jsdoc)
@@ -188,11 +190,11 @@ map <Leader>r :call RunNearestSpec()<CR>
 let g:rspec_command = "VtrSendCommandToRunner rspec {spec}"
 
 "Rubocop
-let g:syntastic_ruby_checkers          = ['rubocop', 'mri']
-let g:syntastic_ruby_rubocop_exec      = '`which rubocop`'
+let g:syntastic_ruby_checkers     = ['rubocop', 'mri']
+let g:syntastic_ruby_rubocop_exec = '`which rubocop`'
 
 " Typescript
-let g:tsuquyomi_completion_detail = 1
-let g:tsuquyomi_disable_quickfix = 1
+let g:tsuquyomi_completion_detail   = 1
+let g:tsuquyomi_disable_quickfix    = 1
 let g:tsuquyomi_use_dev_node_module = 1
 let g:syntastic_typescript_checkers = ['tsuquyomi']
