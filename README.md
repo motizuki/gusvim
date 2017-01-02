@@ -46,7 +46,8 @@ Vim 7.4 or above + compiled with Lua (neocomplete plugin)
 `"xyy` copy line into x register (replace x with any other)  
 `<Ctrl-r>x` while in insert mote will paste content of register x (replace x with any other)  
 `"xp` paste from register x  
-`:reg` Display the contents of all numbered and named registers.  
+`:reg` Display the contents of all numbered and named registers. 
+`:cope` Open quickfix list
 
 ### Ctags
 Generate ctags - `ctags -R --languages=ruby --exclude=.git --exclude=log . $(bundle list --paths)`  
@@ -83,6 +84,7 @@ Auto generate ctags on bundle - ` gem install gem-ctags`
  - `Ctrl-p` - Previous file  
  - `cc` - Commit window  
  - `:Gdiff ~3` Diff 3 commits ago or replace with revision
+ - `:Glog -- %` Loads commits that touches the current file in the quickfix list
 
 ### Gitgutter
 `,hp` - preview stage  
