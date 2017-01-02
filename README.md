@@ -82,6 +82,7 @@ Auto generate ctags on bundle - ` gem install gem-ctags`
  - `Ctrl-n` - Next file  
  - `Ctrl-p` - Previous file  
  - `cc` - Commit window  
+ - `:Gdiff ~3` Diff 3 commits ago or replace with revision
 
 ### Gitgutter
 `,hp` - preview stage  
