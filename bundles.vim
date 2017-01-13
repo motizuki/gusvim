@@ -101,7 +101,7 @@ call dein#add('elixir-lang/vim-elixir')
 call dein#add('szw/vim-tags')
 
 " TS -- Depends on vimproc
-call dein#add('Quramy/tsuquyomi', {'depends': 'Shougo/vimproc.vim'})
+call dein#add('Quramy/tsuquyomi', {'rev': 'master', 'depends': 'Shougo/vimproc.vim'})
 call dein#add('leafgarland/typescript-vim')
 
 call dein#end()
