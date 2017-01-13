@@ -31,7 +31,7 @@ call dein#add('rking/ag.vim')
 " text object based on indent level (ai, ii)
 call dein#add('austintaylor/vim-indentobject')
 " plugin for visually displaying indent levels
-call dein#add('Indent-Guides')
+" call dein#add('Indent-Guides')
 " end certain structures automatically, e.g. begin/end etc.
 call dein#add('tpope/vim-endwise')
 " visual undo tree
