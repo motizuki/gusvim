@@ -14,8 +14,6 @@ call dein#add('scrooloose/nerdtree')
 call dein#add('scrooloose/nerdcommenter')
 " fuzzy file open
 call dein#add('kien/ctrlp.vim')
-" tags list navigation
-call dein#add('taglist.vim')
 " yank history
 call dein#add('YankRing.vim')
 " git integration

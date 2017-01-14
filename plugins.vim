@@ -196,5 +196,5 @@ let g:syntastic_ruby_rubocop_exec = '`which rubocop`'
 " Typescript
 let g:tsuquyomi_completion_detail   = 1
 let g:tsuquyomi_disable_quickfix    = 1
-let g:tsuquyomi_use_dev_node_module = 1
+let g:tsuquyomi_use_dev_node_module = 0
 let g:syntastic_typescript_checkers = ['tsuquyomi']
