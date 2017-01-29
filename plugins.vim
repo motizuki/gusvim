@@ -124,7 +124,7 @@ set noshowmode
 autocmd BufRead,BufNewFile *.spec.js set filetype=javascript-jasmine syntax=javascript
 
 " UltiSnips
-let g:UltiSnipsExpandTrigger        = "<space>"
+let g:UltiSnipsExpandTrigger        = "<c-space>"
 let g:UltiSnipsJumpForwardTrigger   = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger  = "<s-tab>"
 
