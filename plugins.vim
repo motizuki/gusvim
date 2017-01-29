@@ -124,13 +124,9 @@ set noshowmode
 autocmd BufRead,BufNewFile *.spec.js set filetype=javascript-jasmine syntax=javascript
 
 " UltiSnips
-let g:UltiSnipsExpandTrigger        = "<tab>"
+let g:UltiSnipsExpandTrigger        = "<space>"
 let g:UltiSnipsJumpForwardTrigger   = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger  = "<s-tab>"
-
-" Super Tab
-let g:SuperTabDefaultCompletionType = '<C-n>'
-let g:SuperTabCrMapping             = 0
 
 " Set Gdiff opt to vertical
 set diffopt+=vertical

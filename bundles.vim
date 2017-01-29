@@ -46,7 +46,6 @@ Plug 'Valloric/YouCompleteMe', {'do': './install.py'}
 Plug 'honza/vim-snippets'
 " Snipmate
 Plug 'SirVer/ultisnips'
-Plug 'ervandew/supertab'
 
 " JS
 Plug 'othree/javascript-libraries-syntax.vim'
@@ -98,6 +97,10 @@ Plug 'szw/vim-tags'
 " TS -- Depends on vimproc
 Plug 'Quramy/tsuquyomi'
 Plug 'leafgarland/typescript-vim'
+
+" fzf
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
