@@ -3,6 +3,8 @@ set nocompatible
 syntax on
 filetype plugin indent on
 colorscheme solarized
+set clipboard=unnamed
+
 " let g:solarized_termcolors=256
 " set background=light
 

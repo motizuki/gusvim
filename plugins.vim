@@ -52,10 +52,6 @@ let NERDSpaceDelims=1
 nmap <leader>/ :call NERDComment(0, "invert")<cr>
 vmap <leader>/ :call NERDComment(0, "invert")<cr>
 
-" ,t to show tags window
-let Tlist_Show_Menu=1
-nmap <leader>t :TlistToggle<CR>
-
 " yankring
 let g:yankring_replace_n_pkey = '<leader>['
 let g:yankring_replace_n_nkey = '<leader>]'
@@ -135,25 +131,6 @@ let g:UltiSnipsJumpBackwardTrigger  = "<s-tab>"
 " Super Tab
 let g:SuperTabDefaultCompletionType = '<C-n>'
 let g:SuperTabCrMapping             = 0
-
-" Neocomplete - popup
-let g:acp_enableAtStartup           = 0
-let g:neocomplete#enable_at_startup = 1
-
-" Called once right before you start selecting multiple cursors
-function! Multiple_cursors_before()
-  if exists(':NeoCompleteLock')==2
-    exe 'NeoCompleteLock'
-  endif
-endfunction
-
-" Called once only when the multiple selection is canceled (default <Esc>)
-function! Multiple_cursors_after()
-  if exists(':NeoCompleteUnlock')==2
-    exe 'NeoCompleteUnlock'
-  endif
-endfunction
-
 
 " Set Gdiff opt to vertical
 set diffopt+=vertical
