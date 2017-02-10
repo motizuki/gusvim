@@ -23,8 +23,6 @@ Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-surround'
 " vertical alignment tool
 Plug 'tsaleh/vim-align'
-" 'ag' searching integration
-Plug 'rking/ag.vim'
 " text object based on indent level (ai, ii)
 Plug 'austintaylor/vim-indentobject'
 " end certain structures automatically, e.g. begin/end etc.
@@ -67,6 +65,8 @@ Plug 'tpope/vim-rails'
 Plug 'thoughtbot/vim-rspec'
 " i18n extraction plugin
 Plug 'stefanoverna/vim-i18n'
+" Ruby eval
+Plug 'kmdsbng/vim-ruby-eval'
 
 " color themes
 Plug 'altercation/vim-colors-solarized'
@@ -78,6 +78,7 @@ Plug 'chrisbra/Colorizer'
 Plug 'vim-ruby/vim-ruby'
 Plug 'tsaleh/vim-tmux'
 Plug 'JSON.vim'
+Plug 'cakebaker/scss-syntax.vim'
 Plug 'tpope/vim-cucumber'
 Plug 'tpope/vim-haml'
 Plug 'tpope/vim-markdown'
