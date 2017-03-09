@@ -152,6 +152,13 @@ nmap <silent> <C-x> ?function<cr>:noh<cr><Plug>(jsdoc)
 map <Leader>r :call RunNearestSpec()<CR>
 let g:rspec_command = "VtrSendCommandToRunner rspec {spec}"
 
+autocmd FileType ruby compiler ruby
+autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+
+
 "Rubocop
 let g:syntastic_ruby_checkers     = ['rubocop', 'mri']
 let g:syntastic_ruby_rubocop_exec = '`which rubocop`'
