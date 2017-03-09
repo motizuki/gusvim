@@ -105,16 +105,6 @@ let g:indent_guides_color_change_percent = 5
 " Gundo
 let g:gundo_close_on_revert = 1
 
-" Switch
-" making some of the switches defined for ruby work in HAML files
-autocmd FileType haml let b:switch_definitions =
-      \ [
-      \   g:switch_builtins.ruby_hash_style,
-      \   g:switch_builtins.ruby_string,
-      \   g:switch_builtins.true_false,
-      \   g:switch_builtins.true_false,
-      \ ]
-
 " vim-airline
 let g:airline_powerline_fonts=1
 let g:airline_theme='badwolf' " dark simple badwolf solarized solarized2
