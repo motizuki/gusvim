@@ -107,8 +107,8 @@ let g:gundo_close_on_revert = 1
 
 " vim-airline
 let g:airline_powerline_fonts=1
-let g:airline_theme='badwolf' " dark simple badwolf solarized solarized2
-set noshowmode
+let g:airline_theme='dark' " dark simple badwolf solarized solarized2
+" set noshowmode
 
 " Filetypes
 autocmd BufRead,BufNewFile *.spec.js set filetype=javascript-jasmine syntax=javascript
