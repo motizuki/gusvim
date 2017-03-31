@@ -42,6 +42,7 @@ nmap <leader>p :NERDTreeFind<CR>
 
 " Gundo
 nmap <leader>u :GundoToggle<CR>
+let g:gundo_prefer_python3 = 1
 
 " ,ag for Ag silver searcher
 nmap <leader>ag :silent Ag<space>
