@@ -2,7 +2,12 @@
 set nocompatible
 syntax on
 filetype plugin indent on
-colorscheme solarized
+colorscheme solarized8_dark_high
+
+" uncomment this to use the same clipboard as the cmd+c otherwise content of
+" clipboard will be stored in the register *
+" set clipboard=unnamed
+
 " let g:solarized_termcolors=256
 " set background=light
 
@@ -18,12 +23,9 @@ if has('multi_byte')
   set encoding=utf-8
 end
 
-autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
-autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
-autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
-
 " presentation settings
 set relativenumber      " precede each line with its line number
+set cursorline
 set number
 set numberwidth=3       " number of culumns for line numbers
 set textwidth=0         " Do not wrap words (insert)
@@ -34,7 +36,6 @@ set ruler               " line and column number of the cursor position
 set wildmenu            " enhanced command completion
 set visualbell          " use visual bell instead of beeping
 set laststatus=2        " always show the status line
-"set listchars=tab:▷⋅,trail:·,eol:$
 set listchars=tab:▷⋅,trail:·
 set list
 
@@ -76,11 +77,6 @@ set incsearch           " Incremental search
 set hlsearch            " Highlight search match
 set ignorecase          " Do case insensitive matching
 set smartcase           " do not ignore if search pattern has CAPS
-
-" omni completion settings
-"set ofu=syntaxcomplete#Complete
-"let g:rubycomplete_buffer_loading = 0
-"let g:rubycomplete_classes_in_global = 1
 
 " directory settings
 call system('mkdir -vp ~/.backup/undo/ > /dev/null 2>&1')

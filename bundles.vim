@@ -2,106 +2,107 @@ if &compatible
   set nocompatible
 endif
 
-set runtimepath^=~/.vim/bundle/repos/github.com/Shougo/dein.vim
-call dein#begin('~/.vim/bundle')
+call plug#begin('~/.vim/plugged')
 
-call dein#add('Shougo/dein.vim')
+Plug 'Shougo/dein.vim'
 
-call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 " file tree
-call dein#add('scrooloose/nerdtree')
+Plug 'scrooloose/nerdtree'
 " commenting
-call dein#add('scrooloose/nerdcommenter')
+Plug 'scrooloose/nerdcommenter'
 " fuzzy file open
-call dein#add('kien/ctrlp.vim')
+Plug 'kien/ctrlp.vim'
 " yank history
-call dein#add('YankRing.vim')
+Plug 'YankRing.vim'
 " git integration
-call dein#add('tpope/vim-fugitive')
+Plug 'tpope/vim-fugitive'
 " syntax checking on save
-call dein#add('scrooloose/syntastic')
+Plug 'scrooloose/syntastic'
 " manipulation of surraunding parens, quotes, etc.
-call dein#add('tpope/vim-surround')
+Plug 'tpope/vim-surround'
 " vertical alignment tool
-call dein#add('tsaleh/vim-align')
-" 'ag' searching integration
-call dein#add('rking/ag.vim')
+Plug 'tsaleh/vim-align'
 " text object based on indent level (ai, ii)
-call dein#add('austintaylor/vim-indentobject')
-" plugin for visually displaying indent levels
-" call dein#add('Indent-Guides')
+Plug 'austintaylor/vim-indentobject'
 " end certain structures automatically, e.g. begin/end etc.
-call dein#add('tpope/vim-endwise')
+Plug 'tpope/vim-endwise'
 " visual undo tree
-call dein#add('sjl/gundo.vim')
-" git diff in the gutter (sign column) and stages/reverts hunks
-call dein#add('airblade/vim-gitgutter')
+Plug 'sjl/gundo.vim'
+" git diff in the gutter (sign column and stages/reverts hunks
+Plug 'airblade/vim-gitgutter'
 " hi-speed html coding
-call dein#add('mattn/emmet-vim')
+Plug 'mattn/emmet-vim'
 " indent
-call dein#add('nathanaelkane/vim-indent-guides')
+Plug 'nathanaelkane/vim-indent-guides'
 " airline
-call dein#add('vim-airline/vim-airline')
-call dein#add('vim-airline/vim-airline-themes')
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " Completion popup and snippets
-call dein#add('Shougo/neocomplete.vim') " Requires lua brew install macvim --with-cscope --with-lua
-call dein#add('honza/vim-snippets')
+Plug 'Valloric/YouCompleteMe', {'do': './install.py'}
+Plug 'honza/vim-snippets'
 " Snipmate
-call dein#add('SirVer/ultisnips')
-call dein#add('ervandew/supertab')
+Plug 'SirVer/ultisnips'
 
 " JS
-call dein#add('othree/javascript-libraries-syntax.vim')
-call dein#add('othree/html5.vim')
-call dein#add('Shutnik/jshint2.vim')
-call dein#add('heavenshell/vim-jsdoc')
-call dein#add('pangloss/vim-javascript')
+Plug 'othree/javascript-libraries-syntax.vim'
+Plug 'othree/html5.vim'
+Plug 'Shutnik/jshint2.vim'
+Plug 'heavenshell/vim-jsdoc'
+Plug 'pangloss/vim-javascript'
 
 " Tmux
-call dein#add('christoomey/vim-tmux-runner')
-call dein#add('christoomey/vim-tmux-navigator')
+Plug 'christoomey/vim-tmux-runner'
+Plug 'christoomey/vim-tmux-navigator'
 " Mult Cursor
-call dein#add('terryma/vim-multiple-cursors')
+Plug 'terryma/vim-multiple-cursors'
 
 " Ruby/Rails
 " rails support
-call dein#add('tpope/vim-rails')
+Plug 'tpope/vim-rails'
 " lightweight Rspec runner for Vim
-call dein#add('thoughtbot/vim-rspec')
+Plug 'thoughtbot/vim-rspec'
 " i18n extraction plugin
-call dein#add('stefanoverna/vim-i18n')
+Plug 'stefanoverna/vim-i18n'
+" Ruby eval
+Plug 'kmdsbng/vim-ruby-eval'
 
 " color themes
-call dein#add('altercation/vim-colors-solarized')
-call dein#add('tpope/vim-vividchalk')
-call dein#add('chrisbra/Colorizer')
+Plug 'altercation/vim-colors-solarized'
+Plug 'tpope/vim-vividchalk'
+Plug 'chrisbra/Colorizer'
 
 
 " syntax support
-call dein#add('vim-ruby/vim-ruby')
-call dein#add('tsaleh/vim-tmux')
-call dein#add('JSON.vim')
-call dein#add('tpope/vim-cucumber')
-call dein#add('tpope/vim-haml')
-call dein#add('tpope/vim-markdown')
-call dein#add('ekalinin/Dockerfile.vim')
+Plug 'vim-ruby/vim-ruby'
+Plug 'tsaleh/vim-tmux'
+Plug 'JSON.vim'
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'tpope/vim-cucumber'
+Plug 'tpope/vim-haml'
+Plug 'tpope/vim-markdown'
+Plug 'ekalinin/Dockerfile.vim'
 
-" replacement for the repeat mapping (.) to support plugins
-call dein#add('tpope/vim-repeat')
+" replacement for the repeat mapping (. to support plugins
+Plug 'tpope/vim-repeat'
 " hide .gitignore-d files from vim
-call dein#add('vitaly/vim-gitignore')
+Plug 'vitaly/vim-gitignore'
 " repeat motion with <Space>
-call dein#add('scrooloose/vim-space')
+Plug 'scrooloose/vim-space'
 " Elixir
-call dein#add('elixir-lang/vim-elixir')
+Plug 'elixir-lang/vim-elixir'
 
-call dein#add('szw/vim-tags')
+Plug 'szw/vim-tags'
 
 " TS -- Depends on vimproc
-call dein#add('Quramy/tsuquyomi', {'rev': 'master', 'depends': 'Shougo/vimproc.vim'})
-call dein#add('leafgarland/typescript-vim')
+Plug 'Quramy/tsuquyomi'
+Plug 'leafgarland/typescript-vim'
 
-call dein#end()
+" fzf
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
+call plug#end()
 
 filetype plugin indent on

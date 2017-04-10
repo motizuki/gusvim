@@ -42,6 +42,7 @@ nmap <leader>p :NERDTreeFind<CR>
 
 " Gundo
 nmap <leader>u :GundoToggle<CR>
+let g:gundo_prefer_python3 = 1
 
 " ,ag for Ag silver searcher
 nmap <leader>ag :silent Ag<space>
@@ -51,10 +52,6 @@ nmap <leader>ag :silent Ag<space>
 let NERDSpaceDelims=1
 nmap <leader>/ :call NERDComment(0, "invert")<cr>
 vmap <leader>/ :call NERDComment(0, "invert")<cr>
-
-" ,t to show tags window
-let Tlist_Show_Menu=1
-nmap <leader>t :TlistToggle<CR>
 
 " yankring
 let g:yankring_replace_n_pkey = '<leader>['
@@ -109,51 +106,18 @@ let g:indent_guides_color_change_percent = 5
 " Gundo
 let g:gundo_close_on_revert = 1
 
-" Switch
-" making some of the switches defined for ruby work in HAML files
-autocmd FileType haml let b:switch_definitions =
-      \ [
-      \   g:switch_builtins.ruby_hash_style,
-      \   g:switch_builtins.ruby_string,
-      \   g:switch_builtins.true_false,
-      \   g:switch_builtins.true_false,
-      \ ]
-
 " vim-airline
 let g:airline_powerline_fonts=1
-let g:airline_theme='badwolf' " dark simple badwolf solarized solarized2
-set noshowmode
+let g:airline_theme='dark' " dark simple badwolf solarized solarized2
+" set noshowmode
 
 " Filetypes
 autocmd BufRead,BufNewFile *.spec.js set filetype=javascript-jasmine syntax=javascript
 
 " UltiSnips
-let g:UltiSnipsExpandTrigger        = "<tab>"
+let g:UltiSnipsExpandTrigger        = "<c-space>"
 let g:UltiSnipsJumpForwardTrigger   = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger  = "<s-tab>"
-
-" Super Tab
-let g:SuperTabDefaultCompletionType = '<C-n>'
-let g:SuperTabCrMapping             = 0
-
-" Neocomplete - popup
-let g:acp_enableAtStartup           = 0
-let g:neocomplete#enable_at_startup = 1
-
-" Called once right before you start selecting multiple cursors
-function! Multiple_cursors_before()
-  if exists(':NeoCompleteLock')==2
-    exe 'NeoCompleteLock'
-  endif
-endfunction
-
-" Called once only when the multiple selection is canceled (default <Esc>)
-function! Multiple_cursors_after()
-  if exists(':NeoCompleteUnlock')==2
-    exe 'NeoCompleteUnlock'
-  endif
-endfunction
-
 
 " Set Gdiff opt to vertical
 set diffopt+=vertical
@@ -188,6 +152,13 @@ nmap <silent> <C-x> ?function<cr>:noh<cr><Plug>(jsdoc)
 " vim-rspec
 map <Leader>r :call RunNearestSpec()<CR>
 let g:rspec_command = "VtrSendCommandToRunner rspec {spec}"
+
+autocmd FileType ruby compiler ruby
+autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+
 
 "Rubocop
 let g:syntastic_ruby_checkers     = ['rubocop', 'mri']
