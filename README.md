@@ -1,10 +1,10 @@
 # Requirements  
-Vim 7.4 or above + compiled with Lua (neocomplete plugin)  
+Vim 7.4+
 
 # Install
 `git clone https://github.com/motizuki/gusvim.git ~/gusvim && cd ~/gusvim && sh install.sh`  
 `vim`  
-`:call dein#install()`
+`:PlugInstall`
 
 # Cheatsheet
 
