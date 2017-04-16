@@ -76,3 +76,6 @@ noremap <leader>hf :%s/:\([^=,'"]*\) =>/\1:/gc<cr>
 " toggle paste mode
 set pastetoggle=<F2>
 
+" search word under cursor / selected
+nnoremap <leader>f :Ag <C-R><C-W>
+vnoremap <leader>f y:Ag <C-R>"

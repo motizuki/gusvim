@@ -151,7 +151,7 @@ nmap <silent> <C-x> ?function<cr>:noh<cr><Plug>(jsdoc)
 " Rails - ruby
 " vim-rspec
 map <Leader>r :call RunNearestSpec()<CR>
-let g:rspec_command = "VtrSendCommandToRunner rspec {spec}"
+let g:rspec_command = "VtrSendCommandToRunner bundle exec rspec {spec}"
 
 autocmd FileType ruby compiler ruby
 autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
@@ -169,3 +169,15 @@ let g:tsuquyomi_completion_detail   = 1
 let g:tsuquyomi_disable_quickfix    = 1
 let g:tsuquyomi_use_dev_node_module = 0
 let g:syntastic_typescript_checkers = ['tsuquyomi']
+
+" FZF
+" Mapping selecting mappings
+nmap <leader><tab> <plug>(fzf-maps-n)
+xmap <leader><tab> <plug>(fzf-maps-x)
+omap <leader><tab> <plug>(fzf-maps-o)
+
+" Insert mode completion
+imap <c-x><c-k> <plug>(fzf-complete-word)
+imap <c-x><c-f> <plug>(fzf-complete-path)
+imap <c-x><c-j> <plug>(fzf-complete-file-ag)
+imap <c-x><c-l> <plug>(fzf-complete-line)
