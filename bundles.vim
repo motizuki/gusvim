@@ -50,7 +50,8 @@ Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'othree/html5.vim'
 Plug 'Shutnik/jshint2.vim'
 Plug 'heavenshell/vim-jsdoc'
-Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'othree/yajs'
 
 " Tmux
 Plug 'christoomey/vim-tmux-runner'
