@@ -14,7 +14,7 @@ Plug 'scrooloose/nerdcommenter'
 " fuzzy file open
 Plug 'kien/ctrlp.vim'
 " yank history
-Plug 'YankRing.vim'
+Plug 'vim-scripts/YankRing.vim'
 " git integration
 Plug 'tpope/vim-fugitive'
 " syntax checking on save
@@ -78,7 +78,7 @@ Plug 'chrisbra/Colorizer'
 " syntax support
 Plug 'vim-ruby/vim-ruby'
 Plug 'tsaleh/vim-tmux'
-Plug 'JSON.vim'
+Plug 'vim-scripts/JSON.vim'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'tpope/vim-cucumber'
 Plug 'tpope/vim-haml'
