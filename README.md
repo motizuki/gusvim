@@ -13,6 +13,12 @@ Vim 7.4+
 `space` - Repeat last motion  
 `.` - Repeat last command  
 
+### Quickfix list
+`:cdo[!]` - Execute {cmd} in each valid entry in the quickfix list.
+`:cfdo[!]` - Execute {cmd} in each file in the quickfix list.
+`:ld[o][!]` - Execute {cmd} in each valid entry in the location list for the current window.
+`:lfdo[!]` - Execute {cmd} in each file in the location list for the current window.
+
 ### Utils
 `,qf` - Replace " to '  
 `,e` - mapped to :e **/. essentially you do ,efoo<tab> to get a list of all files starting with foo  
