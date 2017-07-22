@@ -15,9 +15,12 @@ Vim 7.4+
 
 ### Quickfix list
 `:cdo[!]` - Execute {cmd} in each valid entry in the quickfix list.
+
 `:cfdo[!]` - Execute {cmd} in each file in the quickfix list.
+
 `:ld[o][!]` - Execute {cmd} in each valid entry in the location list for the current window.
-`:lfdo[!]` - Execute {cmd} in each file in the location list for the current window.
+
+`:lfdo[!]` - Execute {cmd} in each file in the location list for the current window. 
 
 ### Utils
 `,qf` - Replace " to '  
