@@ -24,8 +24,10 @@ if has('multi_byte')
 end
 
 " presentation settings
-set relativenumber      " precede each line with its line number
-set cursorline
+" slowdown ruby files :(
+" set relativenumber      " precede each line with its line number
+" set cursorline
+
 set number
 set numberwidth=3       " number of culumns for line numbers
 set textwidth=0         " Do not wrap words (insert)
