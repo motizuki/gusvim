@@ -1,4 +1,8 @@
 " syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
 let g:syntastic_enable_signs         = 1
 let g:syntastic_auto_loc_list        = 2
 let g:syntastic_check_on_wq          = 0
@@ -7,8 +11,6 @@ let g:syntastic_style_error_symbol   = '✗'
 let g:syntastic_warning_symbol       = '⚠'
 let g:syntastic_style_warning_symbol = '⚠'
 
-let g:syntastic_html_tidy_ignore_errors   = ["<ion-", "discarding unexpected </ion-", " proprietary attribute \"ng-", "attribute name \"*ng", "attribute name \"[", "attribute name \"("]
-let g:syntastic_html_tidy_blocklevel_tags = ['ion-header-bar', 'ion-pane', 'ion-content', 'ion-view', 'ion-tabs', 'ion-tab', 'ion-nav-view']
 let g:syntastic_haml_checkers             = ['haml_lint']
 
 " Gitgutter
@@ -152,13 +154,6 @@ nmap <silent> <C-x> ?function<cr>:noh<cr><Plug>(jsdoc)
 " vim-rspec
 map <Leader>r :call RunNearestSpec()<CR>
 let g:rspec_command = "VtrSendCommandToRunner bundle exec rspec {spec}"
-
-autocmd FileType ruby compiler ruby
-autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
-autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
-autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
-autocmd FileType ruby,eruby let g:rubycomplete_rails = 0
-
 
 "Rubocop
 let g:syntastic_ruby_checkers     = ['rubocop', 'mri']

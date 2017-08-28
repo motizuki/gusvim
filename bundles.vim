@@ -4,8 +4,6 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'Shougo/dein.vim'
-
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 " file tree
 Plug 'scrooloose/nerdtree'
@@ -18,7 +16,7 @@ Plug 'vim-scripts/YankRing.vim'
 " git integration
 Plug 'tpope/vim-fugitive'
 " syntax checking on save
-Plug 'scrooloose/syntastic'
+Plug 'vim-syntastic/syntastic'
 " manipulation of surraunding parens, quotes, etc.
 Plug 'tpope/vim-surround'
 " vertical alignment tool
@@ -49,7 +47,6 @@ Plug 'SirVer/ultisnips'
 Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'othree/html5.vim'
 Plug 'Shutnik/jshint2.vim'
-Plug 'heavenshell/vim-jsdoc'
 Plug 'mxw/vim-jsx'
 Plug 'othree/yajs'
 
@@ -64,10 +61,6 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-rails'
 " lightweight Rspec runner for Vim
 Plug 'thoughtbot/vim-rspec'
-" i18n extraction plugin
-Plug 'stefanoverna/vim-i18n'
-" Ruby eval
-Plug 'kmdsbng/vim-ruby-eval'
 
 " color themes
 Plug 'altercation/vim-colors-solarized'
