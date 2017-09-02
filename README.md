@@ -124,9 +124,6 @@ Auto generate ctags on bundle - ` gem install gem-ctags`
 ### Gundo
 `,u` - Open Gundo window
 
-### Vim i18n
-`,z` - Extract string to locale file   
-
 ### Vim rails
 `:AV` - open "alternate" file in a new vertical split  
 `:AS` - open "alternate" file in a new horizontal split  

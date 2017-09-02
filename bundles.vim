@@ -15,8 +15,8 @@ Plug 'kien/ctrlp.vim'
 Plug 'vim-scripts/YankRing.vim'
 " git integration
 Plug 'tpope/vim-fugitive'
-" syntax checking on save
-Plug 'vim-syntastic/syntastic'
+" syntax checking async
+Plug 'w0rp/ale'
 " manipulation of surraunding parens, quotes, etc.
 Plug 'tpope/vim-surround'
 " vertical alignment tool
@@ -37,8 +37,8 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-" Completion popup and snippets
-Plug 'Valloric/YouCompleteMe', {'do': './install.py'}
+" VIM8 !! :) Completion popup and snippets
+Plug 'maralla/completor.vim'
 Plug 'honza/vim-snippets'
 " Snipmate
 Plug 'SirVer/ultisnips'

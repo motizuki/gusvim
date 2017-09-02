@@ -1,17 +1,7 @@
-" syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_enable_signs         = 1
-let g:syntastic_auto_loc_list        = 2
-let g:syntastic_check_on_wq          = 0
-let g:syntastic_error_symbol         = '✗'
-let g:syntastic_style_error_symbol   = '✗'
-let g:syntastic_warning_symbol       = '⚠'
-let g:syntastic_style_warning_symbol = '⚠'
-
-let g:syntastic_haml_checkers             = ['haml_lint']
+" ALE vim8 async linter
+let g:ale_linters = {
+      \   'typescript': ['tsserver'],
+      \}
 
 " Gitgutter
 nmap ]h <Plug>GitGutterNextHunk
@@ -19,8 +9,7 @@ nmap [h <Plug>GitGutterPrevHunk
 
 " Tmux nav works on vim
 nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
-" Nasty workaround to fix garbling window when syntastic is scanning
-nnoremap <silent> <c-j> :TmuxNavigateDown<cr>:redraw!<cr>
+nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
 nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 nnoremap <silent> <c-/> :TmuxNavigatePrevious<cr>
@@ -117,9 +106,9 @@ let g:airline_theme='dark' " dark simple badwolf solarized solarized2
 autocmd BufRead,BufNewFile *.spec.js set filetype=javascript-jasmine syntax=javascript
 
 " UltiSnips
-let g:UltiSnipsExpandTrigger        = "<c-space>"
-let g:UltiSnipsJumpForwardTrigger   = "<tab>"
-let g:UltiSnipsJumpBackwardTrigger  = "<s-tab>"
+let g:UltiSnipsExpandTrigger=       "<tab>"
+let g:UltiSnipsJumpForwardTrigger=  "<c-b>"
+let g:UltiSnipsJumpBackwardTrigger= "<c-z>"
 
 " Set Gdiff opt to vertical
 set diffopt+=vertical
@@ -155,15 +144,10 @@ nmap <silent> <C-x> ?function<cr>:noh<cr><Plug>(jsdoc)
 map <Leader>r :call RunNearestSpec()<CR>
 let g:rspec_command = "VtrSendCommandToRunner bundle exec rspec {spec}"
 
-"Rubocop
-let g:syntastic_ruby_checkers     = ['rubocop', 'mri']
-let g:syntastic_ruby_rubocop_exec = '`which rubocop`'
-
 " Typescript
 let g:tsuquyomi_completion_detail   = 1
 let g:tsuquyomi_disable_quickfix    = 1
 let g:tsuquyomi_use_dev_node_module = 0
-let g:syntastic_typescript_checkers = ['tsuquyomi']
 
 " FZF
 " Mapping selecting mappings
