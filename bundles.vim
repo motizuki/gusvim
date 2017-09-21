@@ -56,9 +56,6 @@ Plug 'christoomey/vim-tmux-navigator'
 " Mult Cursor
 Plug 'terryma/vim-multiple-cursors'
 
-" Ruby/Rails
-" rails support
-Plug 'tpope/vim-rails'
 " lightweight Rspec runner for Vim
 Plug 'thoughtbot/vim-rspec'
 
@@ -66,7 +63,6 @@ Plug 'thoughtbot/vim-rspec'
 Plug 'altercation/vim-colors-solarized'
 Plug 'tpope/vim-vividchalk'
 Plug 'chrisbra/Colorizer'
-
 
 " syntax support
 Plug 'vim-ruby/vim-ruby'
