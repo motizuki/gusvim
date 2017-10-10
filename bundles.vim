@@ -49,6 +49,7 @@ Plug 'othree/html5.vim'
 Plug 'Shutnik/jshint2.vim'
 Plug 'mxw/vim-jsx'
 Plug 'othree/yajs'
+Plug 'mxw/vim-jsx'
 
 " Tmux
 Plug 'christoomey/vim-tmux-runner'

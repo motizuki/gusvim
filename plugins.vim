@@ -1,6 +1,7 @@
 " ALE vim8 async linter
 let g:ale_linters = {
       \   'typescript': ['tsserver'],
+      \   'javascript': ['eslint'],
       \}
 let g:ale_sign_error = '•'
 let g:ale_sign_warning = '•'
@@ -134,6 +135,7 @@ let g:vim_tags_use_vim_dispatch = 1
 " JS -
 " Javascript syntax
 let g:used_javascript_libs = 'angularjs, jquery, jasmine, angularuirouter, angularui'
+let g:jsx_ext_required = 0
 
 "JSDoc config
 let g:jsdoc_allow_input_prompt = 1
