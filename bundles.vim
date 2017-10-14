@@ -7,6 +7,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 " file tree
 Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 " commenting
 Plug 'scrooloose/nerdcommenter'
 " fuzzy file open
@@ -47,7 +48,6 @@ Plug 'SirVer/ultisnips'
 Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'othree/html5.vim'
 Plug 'Shutnik/jshint2.vim'
-Plug 'mxw/vim-jsx'
 Plug 'othree/yajs'
 Plug 'mxw/vim-jsx'
 
