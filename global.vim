@@ -51,7 +51,7 @@ set wildignore=.svn,CVS,.git,.hg,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jp
 set shell=/bin/bash     " use bash for shell commands
 set autowriteall        " Automatically save before commands like :next and :make
 set hidden              " enable multiple modified buffers
-set history=1000
+set history=5000
 set autoread            " automatically read file that has been changed on disk and doesn't have changes in vim
 set backspace=indent,eol,start
 set guioptions-=T       " disable toolbar"
@@ -94,9 +94,6 @@ set foldcolumn=0        " columns for folding
 set foldmethod=indent
 set foldlevel=9
 set nofoldenable        "dont fold by default "
-
-" extended '%' mapping for if/then/else/end etc
-runtime macros/matchit.vim
 
 " dictionary
 set dictionary=/usr/share/dict/words

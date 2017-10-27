@@ -32,6 +32,8 @@ Plug 'sjl/gundo.vim'
 Plug 'airblade/vim-gitgutter'
 " hi-speed html coding
 Plug 'mattn/emmet-vim'
+" extended matching for the % operator
+Plug 'adelarsq/vim-matchit'
 " indent
 Plug 'nathanaelkane/vim-indent-guides'
 " airline
@@ -67,9 +69,11 @@ Plug 'chrisbra/Colorizer'
 
 " syntax support
 Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-rails'
 Plug 'tsaleh/vim-tmux'
 Plug 'vim-scripts/JSON.vim'
 Plug 'cakebaker/scss-syntax.vim'
+Plug 'hail2u/vim-css3-syntax'
 Plug 'tpope/vim-cucumber'
 Plug 'tpope/vim-haml'
 Plug 'tpope/vim-markdown'

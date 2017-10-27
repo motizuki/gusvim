@@ -113,6 +113,7 @@ autocmd BufRead,BufNewFile *.spec.js set filetype=javascript-jasmine syntax=java
 let g:UltiSnipsExpandTrigger=       "<tab>"
 let g:UltiSnipsJumpForwardTrigger=  "<c-b>"
 let g:UltiSnipsJumpBackwardTrigger= "<c-z>"
+let g:UltiSnipsSnippetsDir=         "~/gusvim/UltiSnips"
 
 " Set Gdiff opt to vertical
 set diffopt+=vertical
@@ -145,6 +146,8 @@ let g:jsdoc_input_description  = 1
 nmap <silent> <C-x> ?function<cr>:noh<cr><Plug>(jsdoc)
 
 " Rails - ruby
+let ruby_no_expensive = 1
+
 " vim-rspec
 map <Leader>r :call RunNearestSpec()<CR>
 let g:rspec_command = "VtrSendCommandToRunner bundle exec rspec {spec}"
@@ -165,3 +168,6 @@ imap <c-x><c-k> <plug>(fzf-complete-word)
 imap <c-x><c-f> <plug>(fzf-complete-path)
 imap <c-x><c-j> <plug>(fzf-complete-file-ag)
 imap <c-x><c-l> <plug>(fzf-complete-line)
+
+" Ctags
+let g:rails_ctags_arguments = "--languages=ruby . $(bundle list --paths)"
