@@ -1,5 +1,5 @@
 # Requirements  
-Vim 7.4+
+Vim 8+
 
 # Install
 `git clone https://github.com/motizuki/gusvim.git ~/gusvim && cd ~/gusvim && sh install.sh`  
