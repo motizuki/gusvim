@@ -6,6 +6,11 @@ Vim 8+
 `vim`  
 `:PlugInstall`
 
+# Linters
+`htmlhint`
+`tsserver`
+`tslint`
+
 # Cheatsheet
 
 `,` is used as mapleader `backslash` is used as localleader  
