@@ -64,6 +64,7 @@ Vim 8+
 `"xp` paste from register x  
 `:reg` Display the contents of all numbered and named registers. 
 `:cope` Open quickfix list
+`:sort` Visual select lines and sort them :D
 
 ### Ctags
 Generate ctags - `ctags -R --languages=ruby --exclude=.git --exclude=log . $(bundle list --paths)`  
