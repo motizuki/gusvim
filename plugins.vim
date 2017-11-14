@@ -1,11 +1,14 @@
 " ALE vim8 async linter
 let g:ale_linters = {
-      \   'typescript': ['tsserver'],
+      \   'typescript': ['tsserver', 'tslint'],
       \   'javascript': ['eslint'],
+      \   'html': ['htmlhint'],
       \}
 let g:ale_sign_error = '•'
 let g:ale_sign_warning = '•'
 let g:airline#extensions#ale#enabled = 1
+let g:ale_html_htmlhint_options = '--format=unix -c ~/.htmlhintrc'
+let g:ale_completion_enabled = 1
 
 " Gitgutter
 nmap ]h <Plug>GitGutterNextHunk
