@@ -35,7 +35,7 @@ Vim 8+
 `,N` - previous quicklist result (like :Ggrep etc)  
 `Ctrl-e` - switch between 2 last buffers (its just a :b#<cr> :)  
 `Ctrl-n` to cancel current search highlighing  
-`,f` global Silver Searcher for word under the cursor or for selection  
+`,f` global search for word under the cursor or for selection  
 `+` / `-` - easily inc/decrement integers  
 `,W` - remove trailing spaces  
 `Ctrl-h` / `j` / `k` / `l` - simplified split panes navigation  
@@ -90,6 +90,10 @@ Auto generate ctags on bundle - ` gem install gem-ctags`
 ### CtrlP
 `,,` - CtrlP - fuzzy find  
 `,.` - CtrlPClearCache followed by CtrlP - clears the cache and searches the files (not including MRU and buffers)  
+`<leader>l` - Line search
+`<leader>b` - Buffer search
+`<leader>m` - Buffer Tag search
+`<leader>M` - Buffer Tag all search
 
 ### YankRing
 `,y` to show the yankring  

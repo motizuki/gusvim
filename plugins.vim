@@ -8,7 +8,7 @@ let g:ale_sign_error = '•'
 let g:ale_sign_warning = '•'
 let g:airline#extensions#ale#enabled = 1
 let g:ale_html_htmlhint_options = '--format=unix -c ~/.htmlhintrc'
-let g:ale_completion_enabled = 1
+let g:ale_completion_enabled = 0
 
 " Gitgutter
 nmap ]h <Plug>GitGutterNextHunk
@@ -42,9 +42,6 @@ nmap <leader>p :NERDTreeFind<CR>
 nmap <leader>u :GundoToggle<CR>
 let g:gundo_prefer_python3 = 1
 
-" ,ag for Ag silver searcher
-nmap <leader>ag :silent Ag<space>
-
 " nerdcommenter
 " ,/ to invert comment on the current line/selection
 let NERDSpaceDelims=1
@@ -59,6 +56,7 @@ nmap <leader>y :YRShow<cr>
 " put the yankring_history file in ~/.backup
 let g:yankring_history_dir = '~/.backup'
 
+" ctrlp
 let g:ctrlp_map = '<leader>,'
 let g:ctrlp_cmd = 'CtrlP'
 
@@ -94,12 +92,6 @@ let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'mixed', 'line']
 " vim-indentobject
 " add Markdown to the list of indentation based languages
 let g:indentobject_meaningful_indentation = ["haml", "sass", "python", "yaml", "markdown"]
-
-" indent-guides
-let g:indent_guides_start_level = 2
-let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_guide_size = 1
-let g:indent_guides_color_change_percent = 5
 
 " Gundo
 let g:gundo_close_on_revert = 1
@@ -161,6 +153,14 @@ let g:tsuquyomi_disable_quickfix    = 1
 let g:tsuquyomi_use_dev_node_module = 0
 
 " FZF
+" To use ripgrep instead of ag:
+command! -bang -nargs=* Find
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always '.shellescape(<q-args>), 1,
+  \   <bang>0 ? fzf#vim#with_preview('up:60%')
+  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \   <bang>0)
+
 " Mapping selecting mappings
 nmap <leader><tab> <plug>(fzf-maps-n)
 xmap <leader><tab> <plug>(fzf-maps-x)
@@ -174,3 +174,8 @@ imap <c-x><c-l> <plug>(fzf-complete-line)
 
 " Ctags
 let g:rails_ctags_arguments = "--languages=ruby . $(bundle list --paths)"
+
+" completor
+let g:completor_node_binary = "/Users/gus/.nvm/versions/node/v7.4.0/bin/node"
+" omni complete for scss
+let g:completor_scss_omni_trigger = '([\w-]+|@[\w-]*|[\w-]+:\s*[\w-]*)$'

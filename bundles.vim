@@ -4,7 +4,7 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+" Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 " file tree
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -35,67 +35,46 @@ Plug 'mattn/emmet-vim'
 " extended matching for the % operator
 Plug 'adelarsq/vim-matchit'
 " indent
-Plug 'nathanaelkane/vim-indent-guides'
+Plug 'yggdroot/indentLine'
 " airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
 " VIM8 !! :) Completion popup and snippets
-Plug 'maralla/completor.vim'
+Plug 'maralla/completor.vim', {'do' : 'make js'}
 Plug 'honza/vim-snippets'
 " Snipmate
 Plug 'SirVer/ultisnips'
-
-" JS
-Plug 'othree/javascript-libraries-syntax.vim'
-Plug 'othree/html5.vim'
+" Polyglot
+Plug 'sheerun/vim-polyglot'
+" JS linter
 Plug 'Shutnik/jshint2.vim'
-Plug 'othree/yajs'
-Plug 'mxw/vim-jsx'
-
+Plug 'ternjs/tern_for_vim', {'do' : 'npm i'}
 " Tmux
 Plug 'christoomey/vim-tmux-runner'
 Plug 'christoomey/vim-tmux-navigator'
 " Mult Cursor
 Plug 'terryma/vim-multiple-cursors'
-
 " lightweight Rspec runner for Vim
 Plug 'thoughtbot/vim-rspec'
-
-" color themes
-Plug 'altercation/vim-colors-solarized'
-Plug 'tpope/vim-vividchalk'
-Plug 'chrisbra/Colorizer'
-
-" syntax support
-Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-rails'
-Plug 'tsaleh/vim-tmux'
-Plug 'vim-scripts/JSON.vim'
-Plug 'hail2u/vim-css3-syntax'
-Plug 'tpope/vim-cucumber'
-Plug 'tpope/vim-haml'
-Plug 'tpope/vim-markdown'
-Plug 'ekalinin/Dockerfile.vim'
-
 " replacement for the repeat mapping (. to support plugins
 Plug 'tpope/vim-repeat'
 " hide .gitignore-d files from vim
 Plug 'vitaly/vim-gitignore'
 " repeat motion with <Space>
 Plug 'scrooloose/vim-space'
-" Elixir
-Plug 'elixir-lang/vim-elixir'
-
 Plug 'szw/vim-tags'
-
-" TS -- Depends on vimproc
+" TS -- Depends
 Plug 'Quramy/tsuquyomi'
-Plug 'leafgarland/typescript-vim'
-
+Plug 'Quramy/vim-js-pretty-template'
 " fzf
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+
+" color themes
+Plug 'altercation/vim-colors-solarized'
+Plug 'tpope/vim-vividchalk'
+Plug 'chrisbra/Colorizer'
+Plug 'rakr/vim-one'
 
 call plug#end()
 
