@@ -71,7 +71,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 " color themes
-Plug 'altercation/vim-colors-solarized'
+Plug 'lifepillar/vim-solarized8'
 Plug 'tpope/vim-vividchalk'
 Plug 'chrisbra/Colorizer'
 Plug 'rakr/vim-one'
