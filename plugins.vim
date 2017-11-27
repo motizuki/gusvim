@@ -125,9 +125,6 @@ let g:ctrlp_custom_ignore = {
 " Tmux navigator
 let g:tmux_navigator_no_mappings = 1
 
-" vim-tags
-let g:vim_tags_use_vim_dispatch = 1
-
 " JS -
 " Javascript syntax
 let g:used_javascript_libs = 'angularjs, jquery, jasmine, angularuirouter, angularui'

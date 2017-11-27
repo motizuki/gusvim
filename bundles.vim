@@ -11,7 +11,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 " commenting
 Plug 'scrooloose/nerdcommenter'
 " fuzzy file open
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 " yank history
 Plug 'vim-scripts/YankRing.vim'
 " git integration
@@ -62,7 +62,6 @@ Plug 'tpope/vim-repeat'
 Plug 'vitaly/vim-gitignore'
 " repeat motion with <Space>
 Plug 'scrooloose/vim-space'
-Plug 'szw/vim-tags'
 " TS -- Depends
 Plug 'Quramy/tsuquyomi'
 Plug 'Quramy/vim-js-pretty-template'
@@ -75,6 +74,7 @@ Plug 'lifepillar/vim-solarized8'
 Plug 'tpope/vim-vividchalk'
 Plug 'chrisbra/Colorizer'
 Plug 'rakr/vim-one'
+Plug 'tpope/vim-rails'
 
 call plug#end()
 
