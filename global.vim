@@ -101,3 +101,6 @@ let mapleader = ","
 let maplocalleader = "\\"
 
 set fdm=manual
+
+" Gitcommit message
+autocmd Filetype gitcommit setlocal spell textwidth=72
