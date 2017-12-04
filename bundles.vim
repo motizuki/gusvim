@@ -73,6 +73,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'lifepillar/vim-solarized8'
 Plug 'tpope/vim-vividchalk'
 Plug 'chrisbra/Colorizer'
+
+" Rails
 Plug 'rakr/vim-one'
 Plug 'tpope/vim-rails'
 
