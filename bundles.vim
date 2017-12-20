@@ -60,8 +60,6 @@ Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-repeat'
 " hide .gitignore-d files from vim
 Plug 'vitaly/vim-gitignore'
-" repeat motion with <Space>
-Plug 'scrooloose/vim-space'
 " TS -- Depends
 Plug 'Quramy/tsuquyomi'
 Plug 'Quramy/vim-js-pretty-template'
