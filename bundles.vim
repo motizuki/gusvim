@@ -36,9 +36,8 @@ Plug 'mattn/emmet-vim'
 Plug 'adelarsq/vim-matchit'
 " indent
 Plug 'yggdroot/indentLine'
-" airline
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+" status bar
+Plug 'itchyny/lightline.vim'
 " VIM8 !! :) Completion popup and snippets
 Plug 'maralla/completor.vim', {'do' : 'make js'}
 Plug 'honza/vim-snippets'

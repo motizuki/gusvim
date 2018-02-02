@@ -6,9 +6,23 @@ let g:ale_linters = {
       \}
 let g:ale_sign_error = '•'
 let g:ale_sign_warning = '•'
-let g:airline#extensions#ale#enabled = 1
 let g:ale_html_htmlhint_options = '--format=unix -c ~/.htmlhintrc'
 let g:ale_completion_enabled = 0
+let g:ale_lint_on_enter = 0
+let g:ale_lint_on_save = 0
+let g:ale_lint_on_filetype_changed = 0
+
+" lightline
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'fugitive#head'
+      \ },
+      \ }
 
 " Gitgutter
 nmap ]h <Plug>GitGutterNextHunk
@@ -95,11 +109,6 @@ let g:indentobject_meaningful_indentation = ["haml", "sass", "python", "yaml", "
 
 " Gundo
 let g:gundo_close_on_revert = 1
-
-" vim-airline
-let g:airline_powerline_fonts=1
-let g:airline_theme='dark' " dark simple badwolf solarized solarized2
-" set noshowmode
 
 " Filetypes
 autocmd BufRead,BufNewFile *.spec.js set filetype=javascript-jasmine syntax=javascript
