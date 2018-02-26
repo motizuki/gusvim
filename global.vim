@@ -104,3 +104,9 @@ set fdm=manual
 
 " Gitcommit message
 autocmd Filetype gitcommit setlocal spell textwidth=72
+
+if has("mouse_sgr")
+  set ttymouse=sgr
+else
+  set ttymouse=xterm2
+end
