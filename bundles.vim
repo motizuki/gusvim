@@ -73,6 +73,8 @@ Plug 'chrisbra/Colorizer'
 " Rails
 Plug 'tpope/vim-rails'
 
+" Tagbar - list all tags
+Plug 'majutsushi/tagbar'
 call plug#end()
 
 filetype plugin indent on

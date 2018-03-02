@@ -185,3 +185,6 @@ let g:rails_ctags_arguments = "--languages=ruby . $(bundle list --paths)"
 let g:completor_node_binary = "/Users/gus/.nvm/versions/node/v7.4.0/bin/node"
 " omni complete for scss
 let g:completor_scss_omni_trigger = '([\w-]+|@[\w-]*|[\w-]+:\s*[\w-]*)$'
+
+" Tagbar
+nnoremap <leader>tb :Tagbar<cr>
