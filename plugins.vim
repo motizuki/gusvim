@@ -70,38 +70,8 @@ nmap <leader>y :YRShow<cr>
 " put the yankring_history file in ~/.backup
 let g:yankring_history_dir = '~/.backup'
 
-" ctrlp
-let g:ctrlp_map = '<leader>,'
-let g:ctrlp_cmd = 'CtrlP'
-
-nmap <leader>. :CtrlPClearCache<cr>:CtrlP<cr>
-nmap <leader>l :CtrlPLine<cr>
-nmap <leader>b :CtrlPBuff<cr>
-nmap <leader>m :CtrlPBufTag<cr>
-nmap <leader>M :CtrlPBufTagAll<cr>
-
-let g:ctrlp_clear_cache_on_exit = 1
-" ctrlp leaves stale caches behind if there is another vim process running
-" which didn't use ctrlp. so we clear all caches on each new vim invocation
-cal ctrlp#clra()
-
-let g:ctrlp_max_height = 40
-
-" jump to buffer in the same tab if already open
-let g:ctrlp_switch_buffer = 1
-
-" if in git repo - use git file listing command, should be faster
-" using this option overrides standard CtrlP ignore list based on vim wildignore
-" so use 'grep -v ...' to exclude common image and font files from the search
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files --exclude-standard -cod | grep -viE "\.(png|gif|jpg|gz|woff|eot|tiff|ttf|otf)$"']
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(node_modules)$'
-  \ }
-" open multiple files with <c-z> to mark and <c-o> to open. v - opening in
-" vertical splits; j - jump to first open buffer; r - open first in current buffer
-let g:ctrlp_open_multiple_files = 'vjr'
-
-let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'mixed', 'line']
+nmap <leader>, :GFiles<cr>
+nmap <leader>b :Buffer<cr>
 
 " vim-indentobject
 " add Markdown to the list of indentation based languages
@@ -109,9 +79,6 @@ let g:indentobject_meaningful_indentation = ["haml", "sass", "python", "yaml", "
 
 " Gundo
 let g:gundo_close_on_revert = 1
-
-" Filetypes
-autocmd BufRead,BufNewFile *.spec.js set filetype=javascript-jasmine syntax=javascript
 
 " UltiSnips
 let g:UltiSnipsExpandTrigger=       "<tab>"
@@ -125,23 +92,8 @@ set diffopt+=vertical
 " Set nostartofline
 se nosol
 
-" Sane Ignore For ctrlp
-let g:ctrlp_custom_ignore = {
-  \ 'dir': '\.git$\|\.hg$\|\.svn$\|\.yardoc\|public\/images\|public\/system\|data\|log\|tmp$',
-  \ 'file': '\.exe$\|\.so$\|\.dat$'
-  \ }
-
 " Tmux navigator
 let g:tmux_navigator_no_mappings = 1
-
-" JS -
-" Javascript syntax
-let g:used_javascript_libs = 'angularjs, jquery, jasmine, angularuirouter, angularui'
-let g:jsx_ext_required = 0
-
-"JSDoc config
-let g:jsdoc_allow_input_prompt = 1
-let g:jsdoc_input_description  = 1
 
 "Adding control-x binding to jsdoc, jumping above the current function declaration
 nmap <silent> <C-x> ?function<cr>:noh<cr><Plug>(jsdoc)

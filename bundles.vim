@@ -10,8 +10,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 " commenting
 Plug 'scrooloose/nerdcommenter'
-" fuzzy file open
-Plug 'ctrlpvim/ctrlp.vim'
 " yank history
 Plug 'vim-scripts/YankRing.vim'
 " git integration
