@@ -25,8 +25,9 @@ end
 
 " presentation settings
 " slowdown ruby files :(
-" set relativenumber      " precede each line with its line number
-" set cursorline
+set regexpengine=1
+set relativenumber      " precede each line with its line number
+set cursorline
 
 set number
 set numberwidth=3       " number of culumns for line numbers

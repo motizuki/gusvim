@@ -46,6 +46,7 @@ Plug 'sheerun/vim-polyglot'
 " JS linter
 Plug 'Shutnik/jshint2.vim'
 Plug 'ternjs/tern_for_vim', {'do' : 'npm i'}
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 " Tmux
 Plug 'christoomey/vim-tmux-runner'
 Plug 'christoomey/vim-tmux-navigator'
@@ -73,6 +74,10 @@ Plug 'tpope/vim-rails'
 
 " Tagbar - list all tags
 Plug 'majutsushi/tagbar'
+
+" Python
+Plug 'python-mode/python-mode', { 'branch': 'develop' }
+
 call plug#end()
 
 filetype plugin indent on
