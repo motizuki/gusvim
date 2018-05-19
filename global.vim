@@ -42,23 +42,13 @@ set listchars=tab:▷⋅,trail:·
 set list
 set ttyfast             " fast draw
 
-" highlight spell errors
-hi SpellErrors guibg=red guifg=black ctermbg=red ctermfg=black
-
-" behavior
-" ignore these files when completing names and in
-" explorer
+" behavior ignore these files when completing names and in explorer
 set wildignore=.svn,CVS,.git,.hg,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif
 set shell=/bin/bash     " use bash for shell commands
 set autowriteall        " Automatically save before commands like :next and :make
 set hidden              " enable multiple modified buffers
 set history=5000
-set autoread            " automatically read file that has been changed on disk and doesn't have changes in vim
-set backspace=indent,eol,start
-set guioptions-=T       " disable toolbar"
 let bash_is_sh=1        " syntax shell files as bash scripts
-set cinoptions=:0,(s,u0,U1,g0,t0 " some indentation options ':h cinoptions' for details
-set modelines=5         " number of lines to check for vim: directives at the start/end of file
 set autoindent          " automatically indent new line
 
 set ts=2                " number of spaces in a tab
@@ -89,10 +79,6 @@ set noswapfile          " do not write .swp files
 set undofile
 set undodir=~/.backup/undo/,~/tmp,.
 
-" folding
-set foldcolumn=0        " columns for folding
-set foldmethod=indent
-set foldlevel=9
 set nofoldenable        "dont fold by default "
 
 " dictionary
