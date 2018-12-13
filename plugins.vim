@@ -82,9 +82,6 @@ let g:indentobject_meaningful_indentation = ["haml", "sass", "python", "yaml", "
 let g:gundo_close_on_revert = 1
 
 " UltiSnips
-let g:UltiSnipsExpandTrigger=       "<tab>"
-let g:UltiSnipsJumpForwardTrigger=  "<c-b>"
-let g:UltiSnipsJumpBackwardTrigger= "<c-z>"
 let g:UltiSnipsSnippetsDir=         "~/gusvim/UltiSnips"
 
 " Set Gdiff opt to vertical
@@ -95,9 +92,6 @@ se nosol
 
 " Tmux navigator
 let g:tmux_navigator_no_mappings = 1
-
-"Adding control-x binding to jsdoc, jumping above the current function declaration
-nmap <silent> <C-x> ?function<cr>:noh<cr><Plug>(jsdoc)
 
 " Rails - ruby
 let ruby_no_expensive = 1
@@ -131,24 +125,67 @@ imap <c-x><c-f> <plug>(fzf-complete-path)
 imap <c-x><c-j> <plug>(fzf-complete-file-ag)
 imap <c-x><c-l> <plug>(fzf-complete-line)
 
+" Configure FZF to find ctags
+" https://github.com/junegunn/fzf/wiki/Examples-(vim)#jump-to-tags
+function! s:tags_sink(line)
+  let parts = split(a:line, '\t\zs')
+  let excmd = matchstr(parts[2:], '^.*\ze;"\t')
+  execute 'silent e' parts[1][:-2]
+  let [magic, &magic] = [&magic, 0]
+  execute excmd
+  let &magic = magic
+endfunction
+function! s:tags()
+  if empty(tagfiles())
+    echohl WarningMsg
+    echom 'Preparing tags'
+    echohl None
+    call system('ctags -R --exclude=.git --exclude=node_modules --html-kinds=-ij')
+  endif
+
+  call fzf#run({
+  \ 'source':  'cat '.join(map(tagfiles(), 'fnamemodify(v:val, ":S")')).
+  \            '| grep -v -a ^!',
+  \ 'options': '+m -d "\t" --with-nth 1,4.. -n 1 --tiebreak=index',
+  \ 'down':    '40%',
+  \ 'sink':    function('s:tags_sink')})
+endfunction
+command! Tags call s:tags()
+nnoremap <C-t> :Tags<CR>
+nmap <C-t> :Tags<CR>
+
 " Ctags
 let g:rails_ctags_arguments = "--languages=ruby . $(bundle list --paths)"
 
 " completor
 let g:completor_node_binary = "/Users/gus/.nvm/versions/node/v7.4.0/bin/node"
-" omni complete for scss
 let g:completor_scss_omni_trigger = '([\w-]+|@[\w-]*|[\w-]+:\s*[\w-]*)$'
+let g:completor_html_omni_trigger = '(<|<[a-zA-Z][a-zA-Z1-6]*\s+|="|"\s+)$'
+let g:completor_auto_close_doc = 0
 
 " Tagbar
 nnoremap <leader>tb :Tagbar<cr>
+let g:tagbar_type_typescript = {
+  \ 'ctagstype': 'typescript',
+  \ 'kinds': [
+    \ 'c:classes',
+    \ 'n:modules',
+    \ 'f:functions',
+    \ 'v:variables',
+    \ 'v:varlambdas',
+    \ 'm:members',
+    \ 'i:interfaces',
+    \ 'e:enums',
+  \ ]
+\ }
 
 " Prittier
 let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
+" autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
 
 " max line length that prettier will wrap on
 " Prettier default: 80
-let g:prettier#config#print_width = 100
+let g:prettier#config#print_width = 120
 
 " number of spaces per indentation level
 " Prettier default: 2
@@ -168,7 +205,7 @@ let g:prettier#config#single_quote = 'true'
 
 " print spaces between brackets
 " Prettier default: true
-let g:prettier#config#bracket_spacing = 'true'
+let g:prettier#config#bracket_spacing = 'false'
 
 " put > on the last line instead of new line
 " Prettier default: false
@@ -184,10 +221,22 @@ let g:prettier#config#trailing_comma = 'all'
 
 " flow|babylon|typescript|css|less|scss|json|graphql|markdown
 " Prettier default: babylon
-let g:prettier#config#parser = 'typescript'
+let g:prettier#config#parser = 'flow'
 
 " cli-override|file-override|prefer-file
 let g:prettier#config#config_precedence = 'prefer-file'
 
 " always|never|preserve
 let g:prettier#config#prose_wrap = 'preserve'
+
+" lsc
+let g:lsc_server_commands = {'dart': 'dart_language_server'}
+let g:lsc_reference_highlights = v:false
+let g:lsc_enable_daignostics = v:false
+let g:lsc_reference_highlights = v:false
+let g:lsc_enable_incremental_sync = v:false
+let g:lsc_enable_autocomplete = v:false
+let g:lsc_auto_map = {
+    \ 'GoToDefinition': '<C-]>',
+    \ 'Completion': 'omnifunc',
+    \}

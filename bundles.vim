@@ -4,7 +4,6 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-" Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 " file tree
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -20,8 +19,6 @@ Plug 'w0rp/ale'
 Plug 'tpope/vim-surround'
 " vertical alignment tool
 Plug 'tsaleh/vim-align'
-" text object based on indent level (ai, ii)
-Plug 'austintaylor/vim-indentobject'
 " end certain structures automatically, e.g. begin/end etc.
 Plug 'tpope/vim-endwise'
 " visual undo tree
@@ -75,8 +72,11 @@ Plug 'tpope/vim-rails'
 " Tagbar - list all tags
 Plug 'majutsushi/tagbar'
 
-" Python
-Plug 'python-mode/python-mode', { 'branch': 'develop' }
+" Auto tag
+Plug 'craigemery/vim-autotag'
+
+" Dart
+Plug 'natebosch/vim-lsc'
 
 call plug#end()
 

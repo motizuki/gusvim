@@ -76,3 +76,6 @@ set pastetoggle=<F2>
 " search word under cursor / selected
 nnoremap <leader>f :Find <C-R><C-W>
 vnoremap <leader>f y:Find <C-R>"
+
+" helps me autocompleting ids and classes with various special characters
+autocmd FileType html,css,scss setlocal iskeyword=@,48-57,_,-,?,!,192-255
