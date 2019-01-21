@@ -44,6 +44,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'Shutnik/jshint2.vim'
 Plug 'ternjs/tern_for_vim', {'do' : 'npm i'}
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'ianks/vim-tsx'
 " Tmux
 Plug 'christoomey/vim-tmux-runner'
 Plug 'christoomey/vim-tmux-navigator'
@@ -77,6 +78,9 @@ Plug 'craigemery/vim-autotag'
 
 " Dart
 Plug 'natebosch/vim-lsc'
+
+" Markdown
+Plug 'gabrielelana/vim-markdown'
 
 call plug#end()
 

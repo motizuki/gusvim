@@ -240,3 +240,6 @@ let g:lsc_auto_map = {
     \ 'GoToDefinition': '<C-]>',
     \ 'Completion': 'omnifunc',
     \}
+
+" Polyglot
+let g:polyglot_disabled = ['markdown']
