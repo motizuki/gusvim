@@ -13,6 +13,8 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'vim-scripts/YankRing.vim'
 " git integration
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
+Plug 'shumphrey/fugitive-gitlab.vim'
 " syntax checking async
 Plug 'w0rp/ale'
 " manipulation of surraunding parens, quotes, etc.
@@ -81,6 +83,9 @@ Plug 'natebosch/vim-lsc'
 
 " Markdown
 Plug 'gabrielelana/vim-markdown'
+
+Plug 'rhysd/committia.vim'
+Plug 'rhysd/vim-grammarous'
 
 call plug#end()
 
