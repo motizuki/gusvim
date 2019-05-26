@@ -28,6 +28,10 @@ let g:lightline = {
 " Gitgutter
 nmap ]h <Plug>GitGutterNextHunk
 nmap [h <Plug>GitGutterPrevHunk
+let g:gitgutter_max_signs = 200  " default value
+
+" Gitlab gbrowse
+let g:fugitive_gitlab_domains = ['https://gitlab.digitalnz.org/']
 
 " Tmux nav works on vim
 nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
@@ -158,7 +162,7 @@ nmap <C-t> :Tags<CR>
 let g:rails_ctags_arguments = "--languages=ruby . $(bundle list --paths)"
 
 " completor
-let g:completor_node_binary = "/Users/gus/.nvm/versions/node/v7.4.0/bin/node"
+let g:completor_node_binary = "/Users/gus/.nvm/versions/node/v10.15.3/bin/node"
 let g:completor_scss_omni_trigger = '([\w-]+|@[\w-]*|[\w-]+:\s*[\w-]*)$'
 let g:completor_html_omni_trigger = '(<|<[a-zA-Z][a-zA-Z1-6]*\s+|="|"\s+)$'
 let g:completor_auto_close_doc = 0
@@ -243,3 +247,6 @@ let g:lsc_auto_map = {
 
 " Polyglot
 let g:polyglot_disabled = ['markdown']
+
+" terryma/vim-multiple-cursors
+let g:multi_cursor_select_all_word_key = '<C-a>'
