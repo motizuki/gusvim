@@ -1,7 +1,7 @@
 set nocompatible
 syntax on
 filetype plugin indent on
-colorscheme solarized8_dark_high
+colorscheme hybrid
 
 " uncomment this to use the same clipboard as the cmd+c otherwise content of
 " clipboard will be stored in the register *

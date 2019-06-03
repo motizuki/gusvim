@@ -68,6 +68,7 @@ Plug 'junegunn/fzf.vim'
 " color themes
 Plug 'lifepillar/vim-solarized8'
 Plug 'chrisbra/Colorizer'
+Plug 'rafi/awesome-vim-colorschemes'
 
 " Rails
 Plug 'tpope/vim-rails'
