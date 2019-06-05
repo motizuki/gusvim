@@ -1,7 +1,8 @@
 set nocompatible
 syntax on
 filetype plugin indent on
-colorscheme hybrid
+let g:hybrid_custom_term_colors = 1
+colorscheme hybrid_reverse
 
 " uncomment this to use the same clipboard as the cmd+c otherwise content of
 " clipboard will be stored in the register *
