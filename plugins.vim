@@ -250,5 +250,3 @@ let g:polyglot_disabled = ['markdown']
 
 " terryma/vim-multiple-cursors
 let g:multi_cursor_select_all_word_key = '<C-a>'
-
-let g:hybrid_custom_term_colors = 1
