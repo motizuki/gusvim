@@ -81,9 +81,13 @@ Plug 'craigemery/vim-autotag'
 
 " Dart
 Plug 'natebosch/vim-lsc'
+Plug 'thosakwe/vim-flutter'
+Plug 'dart-lang/dart-vim-plugin'
+
 
 " Markdown
 Plug 'gabrielelana/vim-markdown'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 
 Plug 'rhysd/committia.vim'
 Plug 'rhysd/vim-grammarous'

@@ -2,7 +2,11 @@
 let g:ale_linters = {
       \   'typescript': ['tsserver', 'tslint'],
       \   'javascript': ['eslint'],
+      \   'dart': ['language_server'],
       \   'html': ['htmlhint'],
+      \}
+let g:ale_fixers = {
+      \   'dart': ['dartfmt'],
       \}
 let g:ale_sign_error = '•'
 let g:ale_sign_warning = '•'
@@ -250,3 +254,10 @@ let g:polyglot_disabled = ['markdown']
 
 " terryma/vim-multiple-cursors
 let g:multi_cursor_select_all_word_key = '<C-a>'
+
+" https://github.com/iamcco/markdown-preview.nvim
+let g:mkdp_command_for_global = 1
+let g:mkdp_auto_close = 0
+
+" Dart
+let dart_format_on_save = 1
