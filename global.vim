@@ -95,3 +95,4 @@ let mapleader = ","
 let maplocalleader = "\\"
 
 set fdm=manual
+set updatetime=100

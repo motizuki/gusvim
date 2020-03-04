@@ -84,6 +84,8 @@ Plug 'natebosch/vim-lsc'
 Plug 'thosakwe/vim-flutter'
 Plug 'dart-lang/dart-vim-plugin'
 
+" diff
+Plug 'will133/vim-dirdiff'
 
 " Markdown
 Plug 'gabrielelana/vim-markdown'

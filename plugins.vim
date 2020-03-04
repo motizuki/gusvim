@@ -30,9 +30,10 @@ let g:lightline = {
       \ }
 
 " Gitgutter
-nmap ]h <Plug>GitGutterNextHunk
-nmap [h <Plug>GitGutterPrevHunk
 let g:gitgutter_max_signs = 200  " default value
+highlight GitGutterAdd    guifg=#009900 ctermfg=2 ctermbg=green
+highlight GitGutterChange guifg=#bbbb00 ctermfg=3 ctermbg=yellow
+highlight GitGutterDelete guifg=#ff2222 ctermfg=1 ctermbg=red
 
 " Gitlab gbrowse
 let g:fugitive_gitlab_domains = ['https://gitlab.digitalnz.org/']
