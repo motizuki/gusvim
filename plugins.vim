@@ -109,11 +109,6 @@ let ruby_no_expensive = 1
 map <Leader>r :call RunNearestSpec()<CR>
 let g:rspec_command = "VtrSendCommandToRunner bundle exec rspec {spec}"
 
-" Typescript
-let g:tsuquyomi_completion_detail   = 1
-let g:tsuquyomi_disable_quickfix    = 1
-let g:tsuquyomi_use_dev_node_module = 0
-
 " FZF
 " To use ripgrep instead of ag:
 command! -bang -nargs=* Find
@@ -166,12 +161,6 @@ nmap <C-t> :Tags<CR>
 " Ctags
 let g:rails_ctags_arguments = "--languages=ruby . $(bundle list --paths)"
 
-" completor
-let g:completor_node_binary = "/Users/gus/.nvm/versions/node/v10.15.3/bin/node"
-let g:completor_scss_omni_trigger = '([\w-]+|@[\w-]*|[\w-]+:\s*[\w-]*)$'
-let g:completor_html_omni_trigger = '(<|<[a-zA-Z][a-zA-Z1-6]*\s+|="|"\s+)$'
-let g:completor_auto_close_doc = 0
-
 " Tagbar
 nnoremap <leader>tb :Tagbar<cr>
 let g:tagbar_type_typescript = {
@@ -188,56 +177,6 @@ let g:tagbar_type_typescript = {
   \ ]
 \ }
 
-" Prittier
-let g:prettier#autoformat = 0
-" autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
-
-" max line length that prettier will wrap on
-" Prettier default: 80
-let g:prettier#config#print_width = 120
-
-" number of spaces per indentation level
-" Prettier default: 2
-let g:prettier#config#tab_width = 2
-
-" use tabs over spaces
-" Prettier default: false
-let g:prettier#config#use_tabs = 'false'
-
-" print semicolons
-" Prettier default: true
-let g:prettier#config#semi = 'true'
-
-" single quotes over double quotes
-" Prettier default: false
-let g:prettier#config#single_quote = 'true'
-
-" print spaces between brackets
-" Prettier default: true
-let g:prettier#config#bracket_spacing = 'false'
-
-" put > on the last line instead of new line
-" Prettier default: false
-let g:prettier#config#jsx_bracket_same_line = 'true'
-
-" avoid|always
-" Prettier default: avoid
-let g:prettier#config#arrow_parens = 'always'
-
-" none|es5|all
-" Prettier default: none
-let g:prettier#config#trailing_comma = 'all'
-
-" flow|babylon|typescript|css|less|scss|json|graphql|markdown
-" Prettier default: babylon
-let g:prettier#config#parser = 'flow'
-
-" cli-override|file-override|prefer-file
-let g:prettier#config#config_precedence = 'prefer-file'
-
-" always|never|preserve
-let g:prettier#config#prose_wrap = 'preserve'
-
 " lsc
 let g:lsc_server_commands = {'dart': 'dart_language_server'}
 let g:lsc_reference_highlights = v:false
@@ -253,12 +192,6 @@ let g:lsc_auto_map = {
 " Polyglot
 let g:polyglot_disabled = ['markdown']
 
-" terryma/vim-multiple-cursors
-let g:multi_cursor_select_all_word_key = '<C-a>'
-
 " https://github.com/iamcco/markdown-preview.nvim
 let g:mkdp_command_for_global = 1
 let g:mkdp_auto_close = 0
-
-" Dart
-let dart_format_on_save = 1

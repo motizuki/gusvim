@@ -61,7 +61,6 @@ Plug 'sheerun/vim-polyglot'
 " JS linter
 Plug 'Shutnik/jshint2.vim'
 Plug 'ternjs/tern_for_vim', {'do' : 'npm i'}
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'ianks/vim-tsx'
 
 " Tmux
@@ -98,9 +97,6 @@ Plug 'tpope/vim-rails'
 
 " Tagbar - list all tags
 Plug 'majutsushi/tagbar'
-
-" Auto tag
-Plug 'craigemery/vim-autotag'
 
 " Dart
 " Plug 'natebosch/vim-lsc'
