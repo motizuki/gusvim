@@ -29,7 +29,7 @@ set regexpengine=1
 set relativenumber      " precede each line with its line number
 
 " improve scrolling
-set ttyscroll=3
+" set ttyscroll=3
 set lazyredraw
 set nocursorline
 set scrolloff=5
