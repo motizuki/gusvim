@@ -53,7 +53,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'honza/vim-snippets'
 
 " Snipmate
-Plug 'SirVer/ultisnips'
+" Plug 'SirVer/ultisnips'
 
 " Polyglot
 Plug 'sheerun/vim-polyglot'
