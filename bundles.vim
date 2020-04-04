@@ -49,8 +49,9 @@ Plug 'itchyny/lightline.vim'
 
 " VIM8 !! :) Completion popup and snippets
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" Plug 'maralla/completor.vim', {'do' : 'make js'}
-" Plug 'honza/vim-snippets'
+
+" snipMate & UltiSnip Snippets
+Plug 'honza/vim-snippets'
 
 " Snipmate
 " Plug 'SirVer/ultisnips'
