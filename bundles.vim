@@ -21,7 +21,7 @@ Plug 'tpope/vim-rhubarb'
 Plug 'shumphrey/fugitive-gitlab.vim'
 
 " syntax checking async
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 
 " manipulation of surraunding parens, quotes, etc.
 Plug 'tpope/vim-surround'
@@ -53,16 +53,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " snipMate & UltiSnip Snippets
 Plug 'honza/vim-snippets'
 
-" Snipmate
-" Plug 'SirVer/ultisnips'
-
 " Polyglot
 Plug 'sheerun/vim-polyglot'
-
-" JS linter
-Plug 'Shutnik/jshint2.vim'
-Plug 'ternjs/tern_for_vim', {'do' : 'npm i'}
-Plug 'ianks/vim-tsx'
 
 " Tmux
 Plug 'christoomey/vim-tmux-runner'
@@ -79,10 +71,6 @@ Plug 'tpope/vim-repeat'
 
 " hide .gitignore-d files from vim
 Plug 'vitaly/vim-gitignore'
-
-" TS -- Dependencies
-" Plug 'Quramy/tsuquyomi'
-" Plug 'Quramy/vim-js-pretty-template'
 
 " fzf
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }

@@ -24,8 +24,9 @@ if has('multi_byte')
 end
 
 " presentation settings
-" slowdown ruby files :(
-set regexpengine=1
+" slowdown ruby files :( - this set to 1 makes TS slow
+" set regexpengine=1
+
 set relativenumber      " precede each line with its line number
 
 " improve scrolling
@@ -53,7 +54,7 @@ set wildignore=.svn,CVS,.git,.hg,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jp
 set shell=/bin/bash     " use bash for shell commands
 set autowriteall        " Automatically save before commands like :next and :make
 set hidden              " enable multiple modified buffers
-set history=2000
+set history=10000
 set backspace=indent,eol,start
 let bash_is_sh=1        " syntax shell files as bash scripts
 set autoindent          " automatically indent new line
