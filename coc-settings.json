@@ -1,3 +1,10 @@
 {
-  "codeLens.enable": true
+  "codeLens.enable": true,
+  "languageserver": {
+    "terraform": {
+      "command": "terraform-lsp",
+      "filetypes": ["terraform"],
+      "initializationOptions": {}
+    }
+  }
 }

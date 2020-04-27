@@ -114,3 +114,5 @@ set shortmess+=c
 " diagnostics appear/become resolved.
 set signcolumn=yes
 
+" Search for visual selected text
+vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
