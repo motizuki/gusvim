@@ -112,9 +112,17 @@ let g:rspec_command = "VtrSendCommandToRunner bundle exec rspec {spec}"
 
 " FZF
 " To use ripgrep instead of ag:
-command! -bang -nargs=* Find
+command! -bang -nargs=* F
   \ call fzf#vim#grep(
   \   'rg --column --line-number --no-heading --color=always '.shellescape(<q-args>), 1,
+  \   <bang>0 ? fzf#vim#with_preview('up:60%')
+  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \   <bang>0)
+
+" To use ripgrep instead of ag:
+command! -bang -nargs=* FA
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --hidden --color=always '.shellescape(<q-args>), 1,
   \   <bang>0 ? fzf#vim#with_preview('up:60%')
   \           : fzf#vim#with_preview('right:50%:hidden', '?'),
   \   <bang>0)
@@ -189,9 +197,6 @@ let g:lsc_auto_map = {
     \ 'GoToDefinition': '<C-]>',
     \ 'Completion': 'omnifunc',
     \}
-
-" Polyglot
-let g:polyglot_disabled = ['markdown']
 
 " https://github.com/iamcco/markdown-preview.nvim
 let g:mkdp_command_for_global = 1

@@ -2,7 +2,7 @@ set nocompatible
 syntax on
 filetype plugin indent on
 let g:hybrid_custom_term_colors = 1
-colorscheme solarized8_dark_high
+colorscheme challenger_deep
 
 " uncomment this to use the same clipboard as the cmd+c otherwise content of
 " clipboard will be stored in the register *
@@ -116,3 +116,7 @@ set signcolumn=yes
 
 " Search for visual selected text
 vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
+
+" Html to haml
+nmap <leader>h :%!html2haml --erb 2> /dev/null<CR>:set ft=haml<CR>
+vmap <leader>h :!html2haml --erb 2> /dev/null<CR>

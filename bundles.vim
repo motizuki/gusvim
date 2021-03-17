@@ -54,6 +54,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'honza/vim-snippets'
 
 " Polyglot
+let g:polyglot_disabled = ['markdown']
 Plug 'sheerun/vim-polyglot'
 
 " Tmux
@@ -68,9 +69,6 @@ Plug 'thoughtbot/vim-rspec'
 
 " replacement for the repeat mapping (. to support plugins
 Plug 'tpope/vim-repeat'
-
-" hide .gitignore-d files from vim
-Plug 'vitaly/vim-gitignore'
 
 " fzf
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -96,12 +94,18 @@ Plug 'majutsushi/tagbar'
 Plug 'will133/vim-dirdiff'
 
 " Markdown
-Plug 'gabrielelana/vim-markdown'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+Plug 'junegunn/goyo.vim'
 
 " Git commit message
 Plug 'rhysd/committia.vim'
 Plug 'rhysd/vim-grammarous'
+
+" Visual calculation
+Plug 'sk1418/HowMuch'
+
+" Vue
+Plug 'leafOfTree/vim-vue-plugin'
 
 call plug#end()
 
